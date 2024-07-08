@@ -1,8 +1,44 @@
 {% set modalContent %}
-  <section class="case-orimex__content"></section>
-  {% include "../../blocks/design-support-request.twig" with {
-    props: { id: "orimex", }
-  } %}
+  <div class="case-content">
+    <section class="case-orimex__content">
+      <div class="case-orimex__container container">
+        <div class="case-content__inner">
+          <div class="case-content__header">
+            <div class="case-content__header-top">
+              <h2 class="case-content__title case-orimex__title">Разработка и запуск интернет-магазина мебели из дерева</h2>
+            </div>
+            <div class="case-content__header-bottom">
+              <div class="case-content__header-left">
+                <div class="case-content__tags swiper js-swiper-overflow">
+                  <ul class="case-content__tags-list swiper-wrapper">
+                    <li class="case-content__tags-item swiper-slide"><span>UX/UI</span></li>
+                    <li class="case-content__tags-item swiper-slide"><span>E-commerce</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="case-content__header-right"></div>
+            </div>
+          </div>
+          <div class="case-content__main">
+            <div class="case-content__left">
+              <p class="case-content__lebel">Задача</p>
+              <p class="case-content__text">У предприятия был корпоративный сайт с некоторой частью ассортимента продукции. Тем временем дистрибьюторы фабрики начали создавать сайты, где можно быть купить мебель онлайн. Тогда «Оримэкс» принял решение запустить свой интернет-магазин и продавать мебель самостоятельно от фабрики. И с этой задачей они пришли к нам. Было важно показать не только детали товаров, но и красоту структуры материала — дерева.</p>
+            </div>
+            
+            <div class="case-content__right">
+              <p class="case-content__lebel">Клиент</p>
+              <div class="case-content__text-block">
+              <p class="case-content__text">Оримэкс — мебельная фабрика из Республики Мордовия, которая производит предметы интерьера из массива дерева. Это единственный в России серийный производитель мебели из массива дуба. У компании более 800 представительств в России и странах СНГ.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "../../blocks/design-support-request.twig" with {
+      props: { id: "orimex", }
+    } %}
+  </div>
 {% endset %}
 
 {% include "../../ui/modal.twig" with {

@@ -1,8 +1,54 @@
 {% set modalContent %}
-  <section class="case-sarma__content"></section>
-  {% include "../../blocks/design-support-request.twig" with {
-    props: { id: "sarma", }
-  } %}
+  <div class="case-content">
+    <section class="case-sarma__content">
+      <div class="case-sarma__container container">
+        <div class="case-content__inner">
+          <div class="case-content__header">
+            <div class="case-content__header-top">
+              <h2 class="case-content__title case-sarma__title">Запуск интернет&#8209;магазина мебельной фабрики</h2>
+            </div>
+            <div class="case-content__header-bottom">
+              <div class="case-content__header-left">
+                <div class="case-content__tags swiper js-swiper-overflow">
+                  <ul class="case-content__tags-list swiper-wrapper">
+                    <li class="case-content__tags-item swiper-slide"><span>UX/UI</span></li>
+                    <li class="case-content__tags-item swiper-slide"><span>E-commerce</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="case-content__header-right">
+                <a href="https://sarmamebel.ru/" class="case-content__link">
+                  <span>sarmamebel.ru</span>
+                  {% include '../../ui/icon.twig' with {
+                    props: {
+                      href: "site-link-arrow",
+                      class: "case-content__link-icon",
+                    }
+                  } only %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="case-content__main">
+            <div class="case-content__left">
+              <p class="case-content__lebel">Задача</p>
+              <p class="case-content__text">Несмотря на то, что у клиента был сайт, можно сказать, что требовался запуск интернет-магазина с нуля. Как и любому ритейлеру, «Сарме Мебель» было важно, чтобы их мебель и товары можно было заказать легко и удобно из любого уголка России. На личной онлайн-встрече с клиентом мы обсудили все пожелания и выяснили сложности, с которыми придётся столкнуться. Так у «Сарма Мебель» была очень устаревшая система 1С, к которой не было полноценного доступа. Но мы предложили альтернативные пути решения, которые поддержала команда клиента и активно помогала их реализовать со своей стороны.</p>
+            </div>
+            
+            <div class="case-content__right">
+              <p class="case-content__lebel">Клиент</p>
+              <div class="case-content__text-block">
+              <p class="case-content__text">«Сарма Мебель» —  мебельная компания с собственным производством, состоящее из трех фабрик полного цикла. Они выпускают матрасы диваны, кресла, шкафы-купе, комоды, прихожие и другую мебель. Салоны представлены в нескольких регионах, но доставку мебели можно оформить по всей России.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "../../blocks/design-support-request.twig" with {
+      props: { id: "sarma", }
+    } %}
+  </div>
 {% endset %}
 
 {% include "../../ui/modal.twig" with {

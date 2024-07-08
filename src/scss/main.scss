@@ -20,14 +20,21 @@
 @import "./ui/social";
 
 /* Блоки дизайна страницы */
-@import "./blocks/header.scss";
+@import "./blocks/cases/kixbox/case-kixbox";
+@import "./blocks/cases/monsher/case-monsher";
+@import "./blocks/cases/orimex/case-orimex";
+@import "./blocks/cases/sarma/case-sarma";
+@import "./blocks/cases/nashenka/case-nashenka";
+
+/* Блоки дизайна страницы */
+@import "./blocks/header";
 @import "./blocks/cap";
 @import "./blocks/cases";
 
 @import "./blocks/privacy-link";
 @import "./blocks/design-support-request";
 
-@import "./blocks/case-modal";
+@import "./blocks/case-content";
 @import "./blocks/footer";
 
 /* Блоки дизайна страницы */

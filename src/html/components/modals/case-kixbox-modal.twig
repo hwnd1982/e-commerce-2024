@@ -1,8 +1,53 @@
 {% set modalContent %}
-  <section class="case-kixbox__content"></section>
+    <section class="case-kixbox__content">
+      <div class="case-kixbox__container container">
+        <div class="case-content__inner">
+          <div class="case-content__header">
+            <div class="case-content__header-top">
+              <h2 class="case-content__title case-kixbox__title">Castorama: перенос с Magento на Битрикс, много интеграций и разработка PIM-системы на PimСore</h2>
+            </div>
+            <div class="case-content__header-bottom">
+              <div class="case-content__header-left">
+                <div class="case-content__tags swiper js-swiper-overflow">
+                  <ul class="case-content__tags-list swiper-wrapper">
+                    <li class="case-content__tags-item swiper-slide"><span>UX/UI</span></li>
+                    <li class="case-content__tags-item swiper-slide"><span>E-commerce</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="case-content__header-right">
+                <a href="https://www.castorama.ru/" class="case-content__link">
+                  <span>www.castorama.ru</span>
+                  {% include '../../ui/icon.twig' with {
+                    props: {
+                      href: "site-link-arrow",
+                      class: "case-content__link-icon",
+                    }
+                  } only %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="case-content__main">
+            <div class="case-content__left">
+              <p class="case-content__lebel">Задача</p>
+              <p class="case-content__text">Перед нами стояло 2 задачи: <br> внедрение PIM-системы на основе PimCore, <br> перенос сайта клиента с CMS Magento на CMS Битрикс в краткие сроки не только с сохранением всего функционала, но и доработками в рамках расширения его возможностей.</p>
+            </div>
+            
+            <div class="case-content__right">
+              <p class="case-content__lebel">Клиент</p>
+              <div class="case-content__text-block">
+              <p class="case-content__text">Oдна из крупнейших в России сетей гипермаркетов по продаже товаров для дома, дачи и ремонта.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   {% include "../../blocks/design-support-request.twig" with {
     props: { id: "kixbox", }
   } %}
+  </div>
 {% endset %}
 
 {% include "../../ui/modal.twig" with {
