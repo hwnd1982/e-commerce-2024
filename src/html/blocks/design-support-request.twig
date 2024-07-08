@@ -1,0 +1,82 @@
+{% set props = ({
+  id: "main",
+  class: "",
+})|merge(props ?: {}) %}
+
+<section class="design-support-request{{props.class ? " " ~ props.class}}">
+  <div class="container">
+    <div class="design-support-request__box">
+      <div class="design-support-request__info">
+        <p class="design-support-request__title">Начать проект</p>
+        <p class="design-support-request__text">Расскажите подробнее о вашем проекте или позвоните нам для консультации по телефону</p>
+        <a class="design-support-request__link" href="tel:+74955404768">+7 (495) 540-47-68</a>
+      </div>
+        
+      <div class="design-support-request__form">
+        <form id="design-support-form" class="form js-form" method="POST" action="/form/request_new/" autocomplete="off" data-form-id="design-support-request-{{props.id}}">
+          <input type="hidden" name="page" value="https://www.ibrush.ru/">
+          <input type="hidden" name="form-name" value="other">
+          
+          <div class="form__row">
+            {% include '../ui/text-field.twig' with {
+              props: {
+                class: "form__field",
+                label: "Как вас зовут?",
+                name: "name",
+                validate: "text, required",
+                error: "Введен неверный формат",
+            } } only %}
+            {% include '../ui/text-field.twig' with {
+              props: {
+                label: "Телефон, почта",
+                class: "form__field",
+                name: "telEmail",
+                validate: "text, required",
+                error: "Введен неверный формат",
+            } } only %}
+          </div>
+          <div class="form__row">
+            {% include '../ui/text-field.twig' with {
+              props: {
+                class: "form__field",
+                type: "textarea",
+                inputClass: "js-autoheight",
+                label: "Коротко опишите свою задачу",
+                name: "info",
+                validate: "text, required",
+                error: "Введен неверный формат",
+            } } only %}
+          </div>
+
+          <div class="form__row-file form-upload" data-attach>
+            <div class="form-upload__files" data-attach-files></div>
+            <label class="form-upload__label" data-attach-label>
+              <input type="file" class="form-upload__input" data-attach-input name="uploadFiles[]" data-max-files="5">
+              <span class="form-upload__icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.25 13.75V7.75H0.25V6.25H6.25V0.25H7.75V6.25H13.75V7.75H7.75V13.75H6.25Z"></path>
+                </svg>
+              </span>
+              <span class="form-upload__text">Прикрепите техническое задание или бриф</span>
+            </label>
+            <div class="form-upload__inputs" data-attach-inputs=""></div>
+          </div>
+
+          <div class="form__row-submit">
+            <button data-sitekey="6LfI1VEnAAAAAE5a9pCHCXzFl_weIzAOFJ0F7Z0F" data-callback="submitCurrForm" type="submit" class="button g-recaptcha form__submit js-form-submit">Отправить</button>
+            <div class="privacy-link form__row_privacy">
+              <label class="privacy-link__check js-radio">
+                <input type="radio" class="js-radio-input" name="privacy-policy" checked>
+                <span></span>
+              </label>
+              <label>Соглашаюсь с&nbsp;<a href="https://www.ibrush.ru/privacy/">политикой обработки персональных данных</a></label>
+            </div>
+          </div>                    
+
+          <input name="check" type="hidden" value="2">
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</section>

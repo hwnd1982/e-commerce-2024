@@ -1,0 +1,126 @@
+.form-upload {
+  display: flex;
+  gap: 1.6rem;
+  max-width: 100%;
+
+  @include breakpoint-down($sm) {
+    gap: 3.2rem;
+  }
+
+  &__files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    max-width: 100%;
+
+    @include breakpoint-down($sm) {
+      gap: 3.2rem;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    align-self: flex-start;
+    order: -1;
+    gap: 1.6rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+
+    @include breakpoint-down($sm) {
+      gap: 3.2rem;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    border-radius: 1.2rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    background: #fff;
+    transition: 0.3s background;
+
+    @include breakpoint-down($sm) {
+      width: 11.2rem;
+      height: 11.2rem;
+      border-radius: 2.4rem;
+    }
+  }
+
+  &__files:not(:empty) + &__label &__text {
+    display: none;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 140%;
+
+    @include breakpoint-down($sm) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__file {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 100%;
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: none;
+      border-radius: 1.2rem;
+      width: 5.6rem;
+      height: 5.6rem;
+      background: #c7cad0;
+    }
+
+    &-name {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1.6rem;
+      line-height: 160%;
+
+      @include breakpoint-down($sm) {
+      }
+    }
+
+    &-remove {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -1.2rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      cursor: pointer;
+
+      @include breakpoint-down($sm) {
+      }
+    }
+  }
+
+  &__inputs {
+    display: none;
+  }
+}

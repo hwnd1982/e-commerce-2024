@@ -1,0 +1,10 @@
+{% set props = ({
+  width: "16",
+  height: "16",
+  href: "",
+  class: "",
+})|merge(props ?: {}) %}
+
+<svg width="{{ props.width }}" height="{{ props.height }}" class="icon{{ props.class ? " " ~ props.class }}">
+	<use href="./img/sprite/sprite.svg#{{ props.href }}"/>
+</svg>

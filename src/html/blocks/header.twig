@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="header__left">
+    <a href="https://www.ibrush.ru/" class="header__logo">
+      {% include '../ui/icon.twig' with {
+        props: {
+          href: "logo",
+          class: "header__logo-icon",
+        }
+      } only %}</a>
+    <nav class="header__nav">
+      <ul class="header__nal-list">
+        <li class="header__nav-item">
+          <a href="#cases" class="header__nav-link">Кейсы</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#cases" class="header__nav-link">Процесс</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#cases" class="header__nav-link">О компании</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header__right">
+    <p class="header__phone">
+      <a href="tel:+74955404768" class="header__link">+7 495 540-47-68</a>
+      <span class="header__mode-label"> (по будням с 11 до 17)</span>
+    </p>
+    <a href="mailto:welcome@ibrush.ru" class="header__link">welcome@ibrush.ru</a>
+    <a href="https://www.ibrush.ru/brief/" class="button button-light header__brief">Заполнить бриф</a>
+  </div>
+</header>

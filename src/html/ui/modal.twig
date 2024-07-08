@@ -1,0 +1,43 @@
+{% set props = ({
+  id: "",
+  class: "",
+  wrapperClass: "",
+  windowClass: "",
+  closeClass: "",
+  bodyClass: "",
+  title: "",
+  children: "",
+})|merge(props ?: {}) %}
+
+<div class="modal group js-modal{{ props.class ? " " ~ props.class }}" aria-hidden="true" data-modal-id="{{ props.id }}">
+	<div class="modal__wrapper js-modal-wrapper{{ props.wrapperClass ? " " ~ props.wrapperClass }}">
+		<div class="modal__window js-modal-window{{ props.windowClass ? " " ~ props.windowClass }}">
+
+      {% if props.title %}
+        <div class="modal__head">
+          <p class="modal__title">{{props.title}}</p>
+          <button class="modal__close js-modal-close{{props.closeClass ? " " ~ props.closeClass : ""}}">
+            {% include './icon.twig' with {
+              props: {
+                href: "modal-close",
+                class: "modal__close-icon",
+              }
+            } only %}
+          </button>
+        </div>
+      {% else %}
+        <button class="modal__close js-modal-close{{props.closeClass ? " " ~ props.closeClass : ""}}">
+          {% include './icon.twig' with {
+            props: {
+              href: "modal-close",
+              class: "modal__close-icon",
+            }
+          } only %}
+        </button>
+      {% endif %}
+			<div class="modal__body custom-scroll{{ props.bodyClass ? " " ~ props.bodyClass }}">
+				{{ props.children }}
+			</div>
+		</div>
+	</div>
+</div>

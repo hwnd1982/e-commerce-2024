@@ -1,0 +1,81 @@
+.custom-scroll:not(.ps) {
+  overflow-y: auto;
+}
+
+.custom-scroll {
+  position: relative;
+}
+
+.ps {
+  --ps-x-margin: 0;
+  --ps-y-margin: 0;
+  --ps-size: 4px;
+  --ps-thumb-size: 4px;
+  --ps-thumb-color: #e04f39;
+  --ps-color: #efefef;
+
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+
+  &__rail-x,
+  &__rail-y {
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    background-color: #f2eeef;
+    transition: $transition-duration;
+    transition-property: background;
+    background-color: var(--ps-color);
+    opacity: 0;
+  }
+
+  &__rail-x {
+    bottom: 0;
+    margin: var(--ps-x-margin);
+    height: var(--ps-size);
+    border-radius: 1rem;
+  }
+
+  &__rail-y {
+    right: 0;
+    margin: var(--ps-y-margin);
+    width: var(--ps-size);
+    border-radius: 1rem;
+  }
+
+  &__thumb-x,
+  &__thumb-y {
+    position: absolute;
+    transition: $transition-duration;
+    transition-property: background, opacity;
+    background-color: var(--ps-thumb-color);
+    border-radius: 1rem;
+  }
+
+  &__thumb-x {
+    height: var(--ps-thumb-size);
+    bottom: calc((var(--ps-size) - var(--ps-thumb-size)) / 2);
+  }
+
+  &__thumb-y {
+    width: var(--ps-thumb-size);
+    right: calc((var(--ps-size) - var(--ps-thumb-size)) / 2);
+  }
+
+  &.ps--active-x > .ps__rail-x,
+  &.ps--active-y > .ps__rail-y {
+    display: block;
+    opacity: 1;
+  }
+
+  @supports (-ms-overflow-style: none) {
+    overflow: auto !important;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    overflow: auto !important;
+  }
+}

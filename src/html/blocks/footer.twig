@@ -1,0 +1,54 @@
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__left">
+      <div class="footer__contacts">
+        <p class="footer__text">Электропочта для любых вопросов по проектам и&nbsp;не&nbsp;только</p>
+        <a href="mailto:welcome@ibrush.ru" class="footer__contacts-item">welcome@ibrush.ru</a>
+        <p class="footer__contacts-item">ИНН: 5042123324</p>
+      </div>
+      <div class="footer__contacts">
+        <p class="footer__text">Активно делимся внутренней жизнью агентства, достижениями и не забываем про отдых.</p>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a href="https://vk.com/ibrush" target="_blank" class="social__link">
+              {% include '../ui/icon.twig' with {
+                props: {
+                href: "ic-vk",
+                class: "social__icon",
+              } } only %}</a>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.behance.net/ibrushprod" target="_blank" class="social__link">
+              {% include '../ui/icon.twig' with {
+                props: {
+                href: "ic-behance",
+                class: "social__icon",
+              } } only %}</a>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://t.me/indaibrush" target="_blank" class="social__link">
+              {% include '../ui/icon.twig' with {
+                props: {
+                href: "ic-telegram",
+                class: "social__icon",
+              } } only %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__right">
+      <a href="https://www.ibrush.ru/brief/" class="button button-light footer__brief">Заполнить бриф</a>
+      <a href="https://www.ibrush.ru/" class="footer__back">
+        <span>Основной сайт</span>
+        {% include '../ui/icon.twig' with {
+          props: {
+          href: "link-arrow",
+          class: "footer__back-arrow",
+        } } only %}
+      </a>
+    </div>
+  </div>
+</footer>

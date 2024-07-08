@@ -1,0 +1,54 @@
+{% extends "layouts/base.twig" %}
+
+{% set properties = {
+  title: "e-commerce-2024",
+} %}
+
+{% set cases = [
+  {
+    name: "nashenka",
+    text: "Нашенька: запуск магазина в экстремальные сроки",
+  },
+  {
+    name: "sarma",
+    text: "Сарма Мебель: разработка интернет-магазина",
+  },
+    {
+    name: "orimex",
+    text: "Оримэкс: разработка интернет-магазина",
+  },
+    {
+    name: "kixbox",
+    text: "Castorama: перенос с Magento на Битрикс, много интеграций и разработка PIM-системы на PimСore",
+  },
+  {
+    name: "monsher",
+    text: "Monsher: разработка интернет-магазина",
+  },
+] %}
+
+{% block content %}
+
+  {% include "./blocks/cap.twig" %}
+  <section class="cases">
+    <div class="cases__container">
+      <ul class="cases__list">
+        {% for case in cases %}
+          <li class="cases__item js-modal-trigger" data-modal-id="case-{{case.name}}-modal">
+            <h2 class="cases__item-title">{{case.text}}</h2>
+            <img src="./img/cases/{{case.name}}.png" alt="" class="cases__item-img">
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% include "./blocks/design-support-request.twig" %}
+  
+  
+{% endblock %}
+
+{% block modals %}
+  {% for case in cases %}
+    {% include "./components/modals/case-" ~ case.name ~ "-modal.twig" %}
+  {% endfor %}
+{% endblock %}

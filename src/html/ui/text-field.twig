@@ -1,0 +1,54 @@
+{% set props = ({
+  class: "",
+  name: "",
+  
+  label: "",
+  labelClass: "",
+  
+  type: "",
+  inputClass: "",
+  inputValue: "",
+  inputType: "text",
+  inputAttributes: "",
+  
+  validate: "",
+  placeholder: "",
+  required: false,
+  autocomplete: false,
+  
+  error: "",
+  errorRequired: "Это обязательное поле",
+
+})|merge(props ?: {}) %}
+
+<div class="text-field js-text-field{{ props.class ? " " ~ props.class }}{{ props.type ? " " ~ props.type ~ "text" }}">
+
+  <div class="text-field__wrapper">
+    <{{props.type ?: "input"}} 
+      class="text-field__input inputtext js-text-field-input{{ props.inputClass ? " " ~ props.inputClass }}{{ props.lock ? " is-lock"}}"
+      type="{{ props.inputType }}"
+      name="{{ props.name }}"
+      {{ props.placeholder ? ' placeholder="' ~ props.placeholder ~ '"' : ""}}
+      {{ props.inputValue ? ' value="' ~ props.inputValue ~ '"' : ""}}
+      {{ props.validate ? ' data-validate="' ~ props.validate ~ (props.required ? ", required" : "") ~ '"' : "" }}
+      {{ props.autocomplete == false ? 'autocomplete="off"'}}
+      {{ props.inputAttributes }}
+    ></{{props.type ?: "input"}}>
+
+    {% if props.label %}
+      <label class="text-field__label inputtext{{ props.labelClass ? " " ~ props.labelClass }}" for="{{ props.name }}">{{ props.label }}{{ props.required ? " <span>*</span>": "" }}</label>
+    {% endif %}
+  </div>
+
+  {% if props.errorRequired or props.error %}
+    <div class="text-field__errors">
+      {% if props.errorRequired %}
+        <p class="text-field__error _required">{{ props.errorRequired }}</p>
+      {% endif %}
+
+      {% if props.error %}
+        <p class="text-field__error js-text-field-error">{{ props.error }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

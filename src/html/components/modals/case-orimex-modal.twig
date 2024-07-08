@@ -1,0 +1,16 @@
+{% set modalContent %}
+  <section class="case-orimex__content"></section>
+  {% include "../../blocks/design-support-request.twig" with {
+    props: { id: "orimex", }
+  } %}
+{% endset %}
+
+{% include "../../ui/modal.twig" with {
+  props: {
+    id: "case-orimex-modal",
+    class: "case-modal",
+    children: modalContent,
+    bodyClass: "case-orimex__body",
+    windowClass: "case-orimex",
+  }
+} only %}

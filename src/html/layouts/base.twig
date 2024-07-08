@@ -1,0 +1,38 @@
+{% set defaultProperties = {
+  title: "",
+  script: "",
+} %}
+
+{% set properties = defaultProperties|merge(properties ?: {}) %}
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ properties.title }}</title>
+
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-32x32.png">
+
+		<link rel="stylesheet" href="./css/main.bundle.css"/>
+	</head>
+	<body>
+		<div class="wrapper{{properties.script ? ' ' ~ properties.script ~ '-page'}}">
+			{% include "../blocks/header.twig" with {props: {auth: properties.auth}} only %}
+			
+			<main class="relative">{% block content %}{% endblock %}</main>
+
+			{% include '../blocks/footer.twig' %}			
+			{% include "../components/mobile-menu.twig" %}
+
+				<div id="modals">
+					{% block modals %}{% endblock %} 
+				</div>
+			</div>
+
+			<script src="./js/global.bundle.js"></script>
+			{% if properties.script %}
+				<script src="./js/{{ properties.script }}.bundle.js"></script>
+			{% endif %}
+		</body>
+	</html>

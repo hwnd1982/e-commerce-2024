@@ -1,0 +1,16 @@
+{% set modalContent %}
+  <section class="case-sarma__content"></section>
+  {% include "../../blocks/design-support-request.twig" with {
+    props: { id: "sarma", }
+  } %}
+{% endset %}
+
+{% include "../../ui/modal.twig" with {
+  props: {
+    id: "case-sarma-modal",
+    class: "case-modal",
+    children: modalContent,
+    bodyClass: "case-sarma__body",
+    windowClass: "case-sarma",
+  }
+} only %}

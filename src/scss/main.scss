@@ -1,0 +1,34 @@
+@import "node_modules/normalize-scss/sass/normalize";
+@import "../../node_modules/swiper/swiper.css";
+@import "../../node_modules/swiper/modules/navigation.css";
+
+/* Базовые настройки и сброс HTML. */
+@import "./variables";
+@import "./base";
+
+/* Шрифты. */
+@import "./fonts.scss";
+
+/* Блоки дизайна страницы */
+// @import "./ui/";
+@import "./ui/scroll";
+@import "./ui/modal";
+@import "./ui/button";
+@import "./ui/text-field";
+@import "./ui/form";
+@import "./ui/form-upload";
+@import "./ui/social";
+
+/* Блоки дизайна страницы */
+@import "./blocks/header.scss";
+@import "./blocks/cap";
+@import "./blocks/cases";
+
+@import "./blocks/privacy-link";
+@import "./blocks/design-support-request";
+
+@import "./blocks/case-modal";
+@import "./blocks/footer";
+
+/* Блоки дизайна страницы */
+// @import "./blocks/modals/";

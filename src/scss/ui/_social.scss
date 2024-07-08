@@ -1,0 +1,28 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+
+    @include breakpoint-down($sm) {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{% set modalContent %}
+  <section class="case-kixbox__content"></section>
+  {% include "../../blocks/design-support-request.twig" with {
+    props: { id: "kixbox", }
+  } %}
+{% endset %}
+
+{% include "../../ui/modal.twig" with {
+  props: {
+    id: "case-kixbox-modal",
+    class: "case-modal",
+    children: modalContent,
+    bodyClass: "case-kixbox__body",
+    windowClass: "case-kixbox",
+  }
+} only %}

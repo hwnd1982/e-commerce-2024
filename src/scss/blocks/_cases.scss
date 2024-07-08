@@ -1,0 +1,77 @@
+.cases {
+  &__container {
+    padding: 0.4rem;
+    outline: 0.8rem solid #fff;
+    outline-offset: -0.8rem;
+
+    @include breakpoint-down($lg) {
+      padding-right: 1.6rem;
+      padding-left: 1.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-right: 3.2rem;
+      padding-left: 3.2rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #eeeeee;
+
+    @include breakpoint-down($lg) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    padding: 2.4rem;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    grid-column: span 2;
+    z-index: 1;
+    outline: 0.8rem solid #fff;
+    outline-offset: -0.4rem;
+    cursor: pointer;
+
+    @include breakpoint-down($lg) {
+      grid-column: auto;
+      padding: 2rem;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 3.2rem;
+      outline-width: 1.6rem;
+    }
+
+    @include hover {
+      background-color: #fff;
+    }
+
+    &:nth-child(4n) {
+      grid-column: 2 / span 2;
+
+      @include breakpoint-down($lg) {
+        grid-column: auto;
+      }
+    }
+
+    &-title {
+      max-width: 46.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: contain;
+      z-index: -1;
+    }
+  }
+}
