@@ -16,8 +16,11 @@
     margin-bottom: 6rem;
 
     @include breakpoint-down($lg) {
+      margin-bottom: 2.4rem;
     }
+
     @include breakpoint-down($sm) {
+      margin-bottom: 4.8rem;
     }
   }
 
@@ -38,11 +41,10 @@
 
     & > :not(:last-child) {
       margin-right: 0.8rem;
+    }
 
-      @include breakpoint-down($lg) {
-      }
-      @include breakpoint-down($sm) {
-      }
+    @include breakpoint-down($lg) {
+      display: none;
     }
   }
 
@@ -51,11 +53,6 @@
     height: 5.6rem;
     border-radius: 1.2rem;
     background-color: #f4f4f6;
-
-    @include breakpoint-down($lg) {
-    }
-    @include breakpoint-down($sm) {
-    }
   }
 
   &__body {
@@ -64,8 +61,6 @@
     @include breakpoint-down($lg) {
       margin-right: 0;
     }
-    @include breakpoint-down($sm) {
-    }
   }
 
   &__slide {
@@ -73,12 +68,16 @@
 
     @include breakpoint-down($lg) {
       padding-right: 0;
-
-      &:not(:last-child) {
-        padding-bottom: 2rem;
-      }
     }
-    @include breakpoint-down($sm) {
+
+    &:not(:last-child) {
+      @include breakpoint-down($lg) {
+        padding-bottom: 0.8rem;
+      }
+
+      @include breakpoint-down($sm) {
+        padding-bottom: 1.6rem;
+      }
     }
 
     &-inner {
@@ -95,8 +94,11 @@
       }
 
       @include breakpoint-down($lg) {
+        padding: 1.2rem;
       }
+
       @include breakpoint-down($sm) {
+        padding: 2.4rem;
       }
     }
 
