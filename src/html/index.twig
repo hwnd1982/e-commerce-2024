@@ -30,21 +30,12 @@
 {% block content %}
 
   {% include "./blocks/cap.twig" %}
-  <section class="cases">
-    <div class="cases__container">
-      <ul class="cases__list">
-        {% for case in cases %}
-          <li class="cases__item js-modal-trigger" data-modal-id="case-{{case.name}}-modal">
-            <h2 class="cases__item-title">{{case.text}}</h2>
-            <img src="./img/cases/{{case.name}}.png" alt="" class="cases__item-img">
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
+  {% include "./blocks/cases.twig" with {
+    props: {
+      cases: cases,
+  }} only  %}
+  {% include "./blocks/data-driven.twig" %}
   {% include "./blocks/design-support-request.twig" %}
-  
-  
 {% endblock %}
 
 {% block modals %}

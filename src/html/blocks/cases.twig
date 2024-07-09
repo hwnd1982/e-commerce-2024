@@ -1,0 +1,16 @@
+{% set props = ({
+  cases: [],
+})|merge(props ?: {}) %}
+
+<section class="cases">
+  <div class="cases__container">
+    <ul class="cases__list">
+      {% for case in props.cases %}
+        <li class="cases__item js-modal-trigger" data-modal-id="case-{{case.name}}-modal">
+          <h2 class="cases__item-title">{{case.text}}</h2>
+          <img src="./img/cases/{{case.name}}.png" alt="" class="cases__item-img">
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -77,7 +77,7 @@ textarea {
 
 html,
 body {
-  font-size: min(11px, max(6.2px, calc(100vw / 1920 * 10)));
+  font-size: min(13.5px, max(6.2px, calc(100vw / 1920 * 10)));
 
   @include breakpoint-down($lg) {
     font-size: min(9.5px, max(7.5px, calc(100vw / 768 * 10)));
