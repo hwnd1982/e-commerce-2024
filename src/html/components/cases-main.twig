@@ -1,0 +1,69 @@
+{% set props = ({
+  name: "",
+  title: "",
+  tags: [],
+  linkText: '',
+  linkHref: '',
+  linkPosition: '',
+  task: [],
+  client: '',
+})|merge(props ?: {}) %}
+
+{% set link %}
+  <a href="{{props.linkHref}}" class="case-content__link">
+    <span>{{props.linkText}}</span>
+    {% include '../ui/icon.twig' with {
+      props: {
+        href: "site-link-arrow",
+        class: "case-content__link-icon",
+      }
+    } only %}
+  </a>
+{% endset %}
+
+
+<section class="case-{{props.name}}__content">
+  <div class="case-{{props.name}}__container container">
+    <div class="case-content__inner">
+      <div class="case-content__header">
+        <div class="case-content__header-top">
+          <h2 class="case-content__title case-{{props.name}}__title">{{props.title}}</h2>
+          {% if props.linkPosition == "top" %}
+            {{link}}
+          {% endif %}
+        </div>
+        <div class="case-content__header-bottom">
+          <div class="case-content__header-left">
+            <div class="case-content__tags swiper js-swiper-overflow">
+              <ul class="case-content__tags-list swiper-wrapper">
+                {% for tag in props.tags %}
+                  <li class="case-content__tags-item swiper-slide"><span>{{tag}}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="case-content__header-right">
+            {% if props.linkPosition == "bottom" %}
+              {{link}}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="case-content__main">
+        <div class="case-content__left">
+          <p class="case-content__lebel">Задача</p>
+          {% for text in props.task %}
+            <p class="case-content__text">{{text}}</p>
+          {% endfor %}
+        </div>
+        
+        <div class="case-content__right">
+          <p class="case-content__lebel">Клиент</p>
+          <div class="case-content__text-block">
+          <p class="case-content__text">{{props.client}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,6 +3,22 @@
   cases: [],
 })|merge(props ?: {}) %}
 
+{% set content = {
+  name: props.currentId,
+  title: "Редизайн и запуск интернет&#8209;магазина продуктов",
+  tags: ['UX/UI', 'E-commerce'],
+  linkText: 'nasha.severnaya.ru',
+  linkHref: 'https://nasha.severnaya.ru/',
+  linkPosition: "top",
+  task: [
+    'Фабрика «Северная» расширила ассортимент предлагаемой продукции. Она начала сотрудничество с различными производствами и добавила их продукты на онлайн-прилавок своего интернет-магазина.',
+    'Для этого клиент создал новый бренд «Нашенька», под которым требовалось запустить интернет-магазин. Было важно сделать редизайн, учитывая фирменный стиль и гайд-бук клиента, а также его пожелания и его покупателей и органично вписать все это в проект.',
+    'Все это требовалось сделать в сжатые сроки (3,5 месяца).',
+  ],
+  client: '«Нашенька» – новый бренд фабрики «Северная», которая входит в топ-10 по производству мяса цыплят-бройлеров в РФ.',
+} %}
+
+
 {% set review = {
   text: [
     "Работой довольна очень!",
@@ -27,53 +43,10 @@
 
 {% set modalContent %}
   <div class="case-content">
-    <section class="case-{{props.currentId}}__content">
-      <div class="case-{{props.currentId}}__container container">
-        <div class="case-content__inner">
-          <div class="case-content__header">
-            <div class="case-content__header-top">
-              <h2 class="case-content__title case-{{props.currentId}}__title">Редизайн и запуск интернет&#8209;магазина продуктов</h2>
-              <a href="https://nasha.severnaya.ru/" class="case-content__link">
-                <span>nasha.severnaya.ru</span>
-                {% include '../../ui/icon.twig' with {
-                  props: {
-                    href: "site-link-arrow",
-                    class: "case-content__link-icon",
-                  }
-                } only %}
-              </a>
-            </div>
-            <div class="case-content__header-bottom">
-              <div class="case-content__header-left">
-                <div class="case-content__tags swiper js-swiper-overflow">
-                  <ul class="case-content__tags-list swiper-wrapper">
-                    <li class="case-content__tags-item swiper-slide"><span>UX/UI</span></li>
-                    <li class="case-content__tags-item swiper-slide"><span>E-commerce</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="case-content__header-right"></div>
-            </div>
-          </div>
-          <div class="case-content__main">
-            <div class="case-content__left">
-              <p class="case-content__lebel">Задача</p>
-              <p class="case-content__text">Фабрика «Северная» расширила ассортимент предлагаемой продукции. Она начала сотрудничество с различными производствами и добавила их продукты на онлайн-прилавок своего интернет-магазина.</p>
-              <p class="case-content__text">Для этого клиент создал новый бренд «Нашенька», под которым требовалось запустить интернет-магазин. Было важно сделать редизайн, учитывая фирменный стиль и гайд-бук клиента, а также его пожелания и его покупателей и органично вписать все это в проект.</p>
-              <p class="case-content__text">Все это требовалось сделать в сжатые сроки (3,5 месяца).</p>
-            </div>
-            
-            <div class="case-content__right">
-              <p class="case-content__lebel">Клиент</p>
-              <div class="case-content__text-block">
-              <p class="case-content__text">Российский бренд Monsher создаёт качественную бытовую технику для дома, используя современные технологии и нестандартные решения</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include "../cases-main.twig" with { props: content } only %}
+    {#  #}
 
+    {#  #}
     {% include '../../blocks/result.twig' with { props: result} only %}
     {% include '../../blocks/review.twig' with  { props: review} only %}
 

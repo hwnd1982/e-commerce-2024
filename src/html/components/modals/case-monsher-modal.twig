@@ -3,6 +3,19 @@
   cases: [],
 })|merge(props ?: {}) %}
 
+{% set content = {
+  name: props.currentId,
+  title: "Редизайн интернет&#8209;магазина бытовой техники Monsher",
+  tags: ['Аналитика', 'UX/UI', 'E-commerce', 'Разработка'],
+  linkText: 'monsherrus.ru',
+  linkHref: 'https://monsherrus.ru/',
+  linkPosition: "top",
+  task: [
+    'Сделать редизайн сайта, используя лучшие практики UX/UI и современные тренды. Особое внимание нужно было уделить повышению информативности карточек',
+  ],
+  client: 'Российский бренд Monsher создаёт качественную бытовую технику для дома, используя современные технологии и нестандартные решения',
+} %}
+
 {% set result = {
   text: [
     'Ребята обратились к нас с четким запросом — сделать так, чтобы сайт продавал и продавал хорошо. У Моншер ранее уже был сайт, он выступал витриной и знакомил пользователей с компание, на нем можно было проникнуться философией и эстетикой бренда (к слову родом из Франции). Но конверсия была низкой — основной проблемой были пользовательсие сценарии.',
@@ -18,53 +31,10 @@
 
 {% set modalContent %}
   <div class="case-content">
-    <section class="case-{{props.currentId}}__content">
-      <div class="case-{{props.currentId}}__container container">
-        <div class="case-content__inner">
-          <div class="case-content__header">
-            <div class="case-content__header-top">
-              <h2 class="case-content__title case-{{props.currentId}}__title">Редизайн интернет&#8209;магазина бытовой техники Monsher</h2>
-              <a href="https://monsherrus.ru/" class="case-content__link">
-                <span>monsherrus.ru</span>
-                {% include '../../ui/icon.twig' with {
-                  props: {
-                    href: "site-link-arrow",
-                    class: "case-content__link-icon",
-                  }
-                } only %}
-              </a>
-            </div>
-            <div class="case-content__header-bottom">
-              <div class="case-content__header-left">
-                <div class="case-content__tags swiper js-swiper-overflow">
-                  <ul class="case-content__tags-list swiper-wrapper">
-                    <li class="case-content__tags-item swiper-slide"><span>Аналитика</span></li>
-                    <li class="case-content__tags-item swiper-slide"><span>UX/UI</span></li>
-                    <li class="case-content__tags-item swiper-slide"><span>Разработка</span></li>
-                    <li class="case-content__tags-item swiper-slide"><span>E-commerce</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="case-content__header-right"></div>
-            </div>
-          </div>
-          <div class="case-content__main">
-            <div class="case-content__left">
-              <p class="case-content__lebel">Задача</p>
-              <p class="case-content__text">Сделать редизайн сайта, используя лучшие практики UX/UI и современные тренды. Особое внимание нужно было уделить повышению информативности карточек</p>
-            </div>
-            
-            <div class="case-content__right">
-              <p class="case-content__lebel">Клиент</p>
-              <div class="case-content__text-block">
-              <p class="case-content__text">Российский бренд Monsher создаёт качественную бытовую технику для дома, используя современные технологии и нестандартные решения</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+    {% include "../cases-main.twig" with { props: content } only %}
+    {#  #}
+
+    {#  #}
     {% include '../../blocks/result.twig' with { props: result} only %}
     {% include "../cases-slider.twig" with { props: props } only %}
     {% include "../../blocks/design-support-request.twig" with {
