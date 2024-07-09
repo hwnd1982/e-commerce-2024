@@ -1,11 +1,29 @@
+{% set props = ({
+  currentId: "",
+  cases: [],
+})|merge(props ?: {}) %}
+
+{% set result = {
+  text: [
+    'Ребята обратились к нас с четким запросом — сделать так, чтобы сайт продавал и продавал хорошо. У Моншер ранее уже был сайт, он выступал витриной и знакомил пользователей с компание, на нем можно было проникнуться философией и эстетикой бренда (к слову родом из Франции). Но конверсия была низкой — основной проблемой были пользовательсие сценарии.',
+    'Мы глобально переработали юзабилити, и основные флоу. Спроектировали полноценный е-ком, и личным кабинетом, чекаутами, удобной корзиной и персонализированными карточками (добавили рич-контент, отзывы, инструкции). <br> Переработали каталог, теперь он отвечает всем правилам современного е-кома (категории, подкатегории, удобные фильтры и дательно проработанная карточка в выдаче). И конечно же все это по принципу mobile first.',
+    "Было сделано больше 300 макетов, а самое главное в какие сроки! Этап аналитики и прототипа был пройден за 1 месяца, а дизайн со всеми адаптивами и брейкпоинтами, ui-kit'ом за тот же один месяц. От идеи до реализации — 2 месяца",
+    'Теперь на сайте намного проще сделать "Верный выбор"!',
+    'Мы не стоим на месте, как любой хороший продукт, Моншер развивается и нуждается в развитии, а мы продолжаем его развивать и насыщать новыми полезными функциями.',
+  ],
+  src: "./img/result/andrey.png",
+  caption: "Андрей Скляр",
+  role: "Lead-дизайнер"
+} %}
+
 {% set modalContent %}
   <div class="case-content">
-    <section class="case-monsher__content">
-      <div class="case-monsher__container container">
+    <section class="case-{{props.currentId}}__content">
+      <div class="case-{{props.currentId}}__container container">
         <div class="case-content__inner">
           <div class="case-content__header">
             <div class="case-content__header-top">
-              <h2 class="case-content__title case-monsher__title">Редизайн интернет&#8209;магазина бытовой техники Monsher</h2>
+              <h2 class="case-content__title case-{{props.currentId}}__title">Редизайн интернет&#8209;магазина бытовой техники Monsher</h2>
               <a href="https://monsherrus.ru/" class="case-content__link">
                 <span>monsherrus.ru</span>
                 {% include '../../ui/icon.twig' with {
@@ -46,8 +64,11 @@
         </div>
       </div>
     </section>
+    
+    {% include '../../blocks/result.twig' with { props: result} only %}
+    {% include "../cases-slider.twig" with { props: props } only %}
     {% include "../../blocks/design-support-request.twig" with {
-      props: { id: "monsher", }
+      props: { id: props.currentID, }
     } %}
   </div>
 {% endset %}

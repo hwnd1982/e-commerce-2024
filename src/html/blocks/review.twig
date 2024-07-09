@@ -1,0 +1,33 @@
+{% set props = ({
+  text: [],
+  caption: "",
+  role: "",
+  logo: "",
+})|merge(props ?: {}) %}
+
+<section class="review">
+  <div class="container">
+    <div class="review__container"> 
+      
+      <h2 class="review__title">Отзыв клиента</h2>
+      <div class="review__block">
+        <div class="review__text-block">
+          {% for item in props.text %}
+            <p class="review__text">{{ item }}</p>
+          {% endfor %}
+
+          <figure class="review__caption-block">
+            <img class="review__img" src="{{ props.src }}" alt="{{ props.caption}}">
+            <figcaption class="review__caption">{{ props.caption }}, <span class="review__role">{{ props.role }}</span></figcaption>
+          </figure>
+        </div>
+
+        {% if props.logo %}
+          <div class="review__logo">
+            <img src="{{props.logo}}" alt="" width="250" height="68">        
+          </div>
+        {% endif %}
+      </div>
+    </div>  
+  </div>
+</section>

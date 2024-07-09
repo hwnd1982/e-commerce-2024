@@ -1,0 +1,119 @@
+.cases-slider {
+  padding-top: 8rem;
+
+  @include breakpoint-down($lg) {
+  }
+  @include breakpoint-down($sm) {
+  }
+
+  // &__container {
+  // }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+
+    @include breakpoint-down($lg) {
+    }
+    @include breakpoint-down($sm) {
+    }
+  }
+
+  &__title {
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint-down($lg) {
+    }
+    @include breakpoint-down($sm) {
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-right: 0.8rem;
+
+      @include breakpoint-down($lg) {
+      }
+      @include breakpoint-down($sm) {
+      }
+    }
+  }
+
+  &__button {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 1.2rem;
+    background-color: #f4f4f6;
+
+    @include breakpoint-down($lg) {
+    }
+    @include breakpoint-down($sm) {
+    }
+  }
+
+  &__body {
+    margin-right: -2.6rem;
+
+    @include breakpoint-down($lg) {
+      margin-right: 0;
+    }
+    @include breakpoint-down($sm) {
+    }
+  }
+
+  &__slide {
+    padding-right: 2.6rem;
+
+    @include breakpoint-down($lg) {
+      padding-right: 0;
+
+      &:not(:last-child) {
+        padding-bottom: 2rem;
+      }
+    }
+    @include breakpoint-down($sm) {
+    }
+
+    &-inner {
+      padding: 2rem;
+      position: relative;
+      aspect-ratio: 1 / 1;
+      grid-column: span 2;
+      z-index: 1;
+      background-color: #eee;
+      cursor: pointer;
+
+      @include hover {
+        background-color: #fff;
+      }
+
+      @include breakpoint-down($lg) {
+      }
+      @include breakpoint-down($sm) {
+      }
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      max-width: 52rem;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: contain;
+      z-index: -1;
+    }
+  }
+}

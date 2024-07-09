@@ -1,0 +1,44 @@
+{% set props = ({
+  currentId: "",
+  cases: [],
+})|merge(props ?: {}) %}
+
+<section class="cases-slider">
+  <div class="cases-slider__container container">
+    <div class="cases-slider__head">
+      <h2 class="cases-slider__title">Больше кейсов</h2>
+      <div class="cases-slider__buttons">
+        <button type="button" class="cases-slider__button js-prev">
+        {% include '../ui/icon.twig' with {
+          props: {
+            href: "prev",
+            class: "cases-slider__button-icon",
+          }
+        } only %}
+        </button>
+        <button type="button" class="cases-slider__button js-next">
+          {% include '../ui/icon.twig' with {
+            props: {
+              href: "next",
+              class: "cases-slider__button-icon",
+            }
+          } only %}
+        </button>
+      </div>
+    </div>
+    <div class="cases-slider__body swiper js-cases-slider">
+      <div class="swiper-wrapper">
+        {% for case in props.cases %}
+          {% if case.name != props.currentId %}
+            <div class="cases-slider__slide swiper-slide">
+              <div class="cases-slider__slide-inner js-modal-trigger" data-modal-id="case-{{case.name}}-modal">
+                <p class="cases-slider__slide-title">{{case.text}}</p>
+                <img src="./img/cases/{{case.name}}.png" alt="" class="cases-slider__slide-img">
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

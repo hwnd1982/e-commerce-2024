@@ -49,6 +49,11 @@
 
 {% block modals %}
   {% for case in cases %}
-    {% include "./components/modals/case-" ~ case.name ~ "-modal.twig" %}
+    {% include "./components/modals/case-" ~ case.name ~ "-modal.twig" with {
+      props: {
+        currentId: case.name,
+        cases: cases,
+      }
+    } only %}
   {% endfor %}
 {% endblock %}

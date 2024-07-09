@@ -1,11 +1,25 @@
+{% set props = ({
+  currentId: "",
+  cases: [],
+})|merge(props ?: {}) %}
+
+{% set result = {
+  text: [
+    "Нам удалось реализовать все пожелания клиента. Благодаря совместной работе и консолидации наших усилий и команды клиенты все сложности, заявленные на этапе первой встречи, были преодолены наилучшим способом. <br> Желаем «Сарма Мебель» дальнейшего развития проекта, в котором мы с удовольствием им сейчас помогаем.",
+  ],
+  src: "./img/result/anna.png",
+  caption: "Анна Шульженко",
+  role: "Менеджер проекта"
+} %}
+
 {% set modalContent %}
   <div class="case-content">
-    <section class="case-sarma__content">
-      <div class="case-sarma__container container">
+    <section class="case-{{props.currentId}}__content">
+      <div class="case-{{props.currentId}}__container container">
         <div class="case-content__inner">
           <div class="case-content__header">
             <div class="case-content__header-top">
-              <h2 class="case-content__title case-sarma__title">Запуск интернет&#8209;магазина мебельной фабрики</h2>
+              <h2 class="case-content__title case-{{props.currentId}}__title">Запуск интернет&#8209;магазина мебельной фабрики</h2>
             </div>
             <div class="case-content__header-bottom">
               <div class="case-content__header-left">
@@ -45,8 +59,11 @@
         </div>
       </div>
     </section>
+
+    {% include '../../blocks/result.twig' with { props: result} only %}
+    {% include "../cases-slider.twig" with { props: props } only %}
     {% include "../../blocks/design-support-request.twig" with {
-      props: { id: "sarma", }
+      props: { id: props.currentID, }
     } %}
   </div>
 {% endset %}

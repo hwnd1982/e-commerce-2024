@@ -50,7 +50,20 @@
 
   &__nav {
     @include breakpoint-down($lg) {
-      display: none;
+      // display: none;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 1.6rem;
+      background-color: #fff;
+    }
+
+    @include breakpoint-down($lg) {
+      padding: 2.8rem;
     }
 
     &-list {
@@ -59,6 +72,19 @@
 
       & > :not(:last-child) {
         margin-bottom: 1.6rem;
+
+        @include breakpoint-down($lg) {
+          margin-bottom: 0;
+          margin-right: 3.2rem;
+        }
+
+        @include breakpoint-down($sm) {
+          margin-right: 4.8rem;
+        }
+      }
+
+      @include breakpoint-down($lg) {
+        flex-direction: row;
       }
     }
 
@@ -71,21 +97,32 @@
       position: relative;
       white-space: nowrap;
       overflow: hidden;
+      line-height: 1.2;
 
-      &::after {
-        position: absolute;
-        content: "";
-        bottom: 0.1em;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, 0);
-        border-bottom: 1px solid currentColor;
-        transition: $transition-duration;
+      @include breakpoint-down($lg) {
+        font-size: 1.8rem;
       }
 
-      &:hover {
+      @include breakpoint-down($sm) {
+        font-size: 3.2rem;
+      }
+
+      @include breakpoint-up($lg) {
         &::after {
-          width: 0;
+          position: absolute;
+          content: "";
+          bottom: 0.1em;
+          left: 50%;
+          width: 100%;
+          transform: translate(-50%, 0);
+          border-bottom: 1px solid currentColor;
+          transition: $transition-duration;
+        }
+
+        &:hover {
+          &::after {
+            width: 0;
+          }
         }
       }
     }

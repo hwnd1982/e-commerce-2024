@@ -1,0 +1,23 @@
+{% set props = ({
+  text: [],
+  caption: "",
+  role: "",
+})|merge(props ?: {}) %}
+
+<section class="result">
+  <div class="container">
+    <div class="result__block">
+      <h2 class="result__title">Результат</h2>
+      {% for item in props.text %}
+        <p class="result__text">{{ item }}</p>
+      {% endfor %}
+    </div>
+
+    <figure class="result__caption-block">
+      <img class="result__img" src="{{ props.src }}" alt="{{ props.caption }}">
+      <figcaption class="result__text">{{ props.caption }}, <span class="result__role">{{ props.role }}</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+

@@ -1,7 +1,7 @@
 import LazyLoad from "vanilla-lazyload";
 import { initBase, store } from "./utils";
 import { closeModalById, openCustomModal, openModalById } from "./ui";
-import { initUploadFiles } from "./modules";
+import { initCasesSliders, initUploadFiles } from "./modules";
 
 document.addEventListener("DOMContentLoaded", initGlobal);
 
@@ -16,6 +16,7 @@ function initGlobal() {
 
   initBase();
   initUploadFiles();
+  initCasesSliders();
 }
 
 window.openCustomModal = openCustomModal;

@@ -1,10 +1,27 @@
+{% set props = ({
+  currentId: "",
+  cases: [],
+})|merge(props ?: {}) %}
+
+{% set review = {
+  text: [
+    "Работой довольна очень!",
+    "Компания ООО «Айбраш» зарекомендовала себя в качестве надёжного, высококлассного и добросовестного партнёра. ООО «Касторама РУС» благодарит ООО «Айбраш» за плодотворное и успешное сотрудничество.",
+  ],
+  src: "./img/review/castorama.png",
+  caption: "Серов Владимир Владимирович",
+  role: 'Руководитель направления e-commerce',
+  logo: "./img/review/logo-castorama.svg",
+} %}
+
 {% set modalContent %}
-    <section class="case-kixbox__content">
-      <div class="case-kixbox__container container">
+  <div class="case-content">
+    <section class="case-{{props.currentId}}__content">
+      <div class="case-{{props.currentId}}__container container">
         <div class="case-content__inner">
           <div class="case-content__header">
             <div class="case-content__header-top">
-              <h2 class="case-content__title case-kixbox__title">Castorama: перенос с Magento на Битрикс, много интеграций и разработка PIM-системы на PimСore</h2>
+              <h2 class="case-content__title case-{{props.currentId}}__title">Castorama: перенос с Magento на Битрикс, много интеграций и разработка PIM-системы на PimСore</h2>
             </div>
             <div class="case-content__header-bottom">
               <div class="case-content__header-left">
@@ -44,9 +61,13 @@
         </div>
       </div>
     </section>
-  {% include "../../blocks/design-support-request.twig" with {
-    props: { id: "kixbox", }
-  } %}
+
+    {% include '../../blocks/review.twig' with  { props: review} only %}
+
+    {% include "../cases-slider.twig" with { props: props } only %}
+    {% include "../../blocks/design-support-request.twig" with {
+      props: { id: props.currentID, }
+    } %}
   </div>
 {% endset %}
 

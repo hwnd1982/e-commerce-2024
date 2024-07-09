@@ -1,11 +1,16 @@
+{% set props = ({
+  currentId: "",
+  cases: [],
+})|merge(props ?: {}) %}
+
 {% set modalContent %}
   <div class="case-content">
-    <section class="case-orimex__content">
-      <div class="case-orimex__container container">
+    <section class="case-{{props.currentId}}__content">
+      <div class="case-{{props.currentId}}__container container">
         <div class="case-content__inner">
           <div class="case-content__header">
             <div class="case-content__header-top">
-              <h2 class="case-content__title case-orimex__title">Разработка и запуск интернет-магазина мебели из дерева</h2>
+              <h2 class="case-content__title case-{{props.currentId}}__title">Разработка и запуск интернет-магазина мебели из дерева</h2>
             </div>
             <div class="case-content__header-bottom">
               <div class="case-content__header-left">
@@ -35,8 +40,9 @@
         </div>
       </div>
     </section>
+    {% include "../cases-slider.twig" with { props: props } only %}
     {% include "../../blocks/design-support-request.twig" with {
-      props: { id: "orimex", }
+      props: { id: props.currentID, }
     } %}
   </div>
 {% endset %}

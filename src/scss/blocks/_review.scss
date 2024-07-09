@@ -1,0 +1,178 @@
+.review {
+  background-color: #f4f4f6;
+  padding: 10rem 0;
+
+  @include breakpoint-down($lg) {
+    padding: 8rem 0;
+  }
+
+  @include breakpoint-down($sm) {
+    padding: 16rem 0;
+  }
+
+  &__container {
+    padding-top: 5.4rem;
+    padding-bottom: 5.4rem;
+    border-top: 1px solid #c7cad0;
+    border-bottom: 1px solid #c7cad0;
+
+    @include breakpoint-down($lg) {
+      padding-top: 4rem;
+      padding-bottom: 6.4rem;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-top: 8rem;
+      padding-bottom: 12.8rem;
+    }
+  }
+
+  &__block {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "text logo";
+
+    @include breakpoint-down($lg) {
+      grid-template-areas: "logo" "text";
+      grid-template-columns: 100%;
+    }
+
+    @include breakpoint-down($lg) {
+      gap: 2.4rem;
+    }
+    @include breakpoint-down($sm) {
+      gap: 4.8rem;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    grid-area: text;
+
+    @include breakpoint-down($lg) {
+    }
+
+    @include breakpoint-down($sm) {
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 25rem;
+    height: 6.5rem;
+    grid-area: logo;
+    justify-self: center;
+
+    @include breakpoint-down($lg) {
+      justify-self: start;
+      width: 21rem;
+      height: 5.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      width: 42rem;
+      height: 10.2rem;
+    }
+
+    & svg,
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #8f95a1;
+    margin-bottom: 2rem;
+
+    @include breakpoint-down($lg) {
+      font-size: 1.4rem;
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 4.8rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    @include breakpoint-down($lg) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 4rem;
+    }
+  }
+
+  &__caption-block {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @include breakpoint-down($lg) {
+      gap: 1.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      gap: 3.2rem;
+    }
+
+    & picture {
+      flex-shrink: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 6.6rem;
+    height: 6.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @include breakpoint-down($lg) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include breakpoint-down($sm) {
+      width: 12.8rem;
+      height: 12.8rem;
+    }
+  }
+
+  &__caption {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    flex-shrink: 1;
+
+    @include breakpoint-down($lg) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__role {
+    color: #8f95a1;
+
+    @include breakpoint-down($sm) {
+      display: block;
+    }
+  }
+}
