@@ -7,4 +7,4 @@ export * from "./states";
 export * from "./store";
 export * from "./transition";
 export * from "./vh";
-
+export * from "./clipboard";

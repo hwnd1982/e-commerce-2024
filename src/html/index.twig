@@ -2,6 +2,7 @@
 
 {% set properties = {
   title: "e-commerce-2024",
+  script: "index"
 } %}
 
 {% set cases = [
@@ -35,6 +36,7 @@
       cases: cases,
   }} only  %}
   {% include "./blocks/data-driven.twig" %}
+  {% include "./blocks/key-stages.twig" %}
   {% include "./blocks/design-support-request.twig" %}
 {% endblock %}
 

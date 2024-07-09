@@ -1,13 +1,14 @@
 .data-driven {
-  padding: 16rem 0 8rem;
+  padding: 16rem 0 0;
   overflow: hidden;
+  border-bottom: 1px solid #c8c8c8;
 
   @include breakpoint-down($lg) {
-    padding: 8rem 0 4rem;
+    padding: 8rem 0 0;
   }
 
   @include breakpoint-down($sm) {
-    padding: 12rem 0 8rem;
+    padding: 12rem 0 0;
   }
 
   &__container {

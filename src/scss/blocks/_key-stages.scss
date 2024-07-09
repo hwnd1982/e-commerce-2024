@@ -1,0 +1,423 @@
+.key-stages {
+  padding: 16rem 0;
+
+  @include breakpoint-down($lg) {
+    padding: 8rem 0;
+  }
+  @include breakpoint-down($sm) {
+    padding: 15.6rem 0 8.6rem;
+  }
+
+  // &__container {
+  // }
+
+  &__title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 9rem;
+
+    @include breakpoint-down($lg) {
+      padding: 0;
+      margin-bottom: 4.8rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 6.4rem;
+      text-align: left;
+      max-width: 60rem;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 49rem) 1fr;
+    gap: 3.2rem;
+
+    @include breakpoint-down($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.8rem 0.8rem;
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: 100%;
+      gap: 1.6rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 2.4rem;
+    background-color: #efefef;
+
+    @include breakpoint-down($lg) {
+      padding: 2rem 1.8rem;
+      border-radius: 1.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 4rem 3.6rem;
+      border-radius: 3.2rem;
+    }
+
+    &-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 3.6rem;
+
+      @include breakpoint-down($lg) {
+        gap: 1.4rem;
+        margin-bottom: 2.4rem;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    &-title {
+      font-size: 2.2rem;
+      line-height: 1.1;
+      font-weight: 400;
+
+      & > b {
+        font-weight: 500;
+      }
+
+      @include breakpoint-down($lg) {
+        font-size: 1.6rem;
+        line-height: 1.3;
+      }
+
+      @include breakpoint-down($sm) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &-item {
+      background-color: #fff;
+    }
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-column > &-item {
+      border-radius: 7.5rem;
+      padding: 1.2rem 1.6rem;
+      font-size: 1.6rem;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+
+        @include breakpoint-down($lg) {
+          margin-bottom: 0.8rem;
+        }
+
+        @include breakpoint-down($sm) {
+          margin-bottom: 1.6rem;
+        }
+      }
+
+      @include breakpoint-down($lg) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 2.4rem 2.4rem;
+        font-size: 2.8rem;
+      }
+    }
+
+    &-row {
+      display: flex;
+      gap: 0.6rem 0.4rem;
+      flex-wrap: wrap;
+
+      @include breakpoint-down($sm) {
+        gap: 1.2rem;
+      }
+    }
+
+    &-row > &-item {
+      border-radius: 7.5rem;
+      padding: 0.8rem 1.4rem;
+      font-size: 1.4rem;
+      line-height: 1.4;
+
+      @include breakpoint-down($lg) {
+        padding: 0.6rem 1.2rem;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 1.2rem 2.4rem;
+        font-size: 2.8rem;
+      }
+    }
+
+    &-icons {
+      width: 10.2rem;
+      height: 3rem;
+      object-fit: contain;
+      object-position: left center;
+
+      @include breakpoint-down($lg) {
+        width: 9.6rem;
+        height: 3rem;
+      }
+
+      @include breakpoint-down($sm) {
+        width: 19.2rem;
+        height: 6rem;
+      }
+    }
+  }
+
+  &__footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 4.2rem;
+
+    @include breakpoint-down($lg) {
+      margin-top: 6.4rem;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @include breakpoint-down($sm) {
+        gap: 2.4rem 0;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__time {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    color: #00000099;
+    margin-right: 1.6rem;
+
+    @include breakpoint-down($lg) {
+      font-size: 1.5rem;
+      margin-right: 0.8rem;
+    }
+    @include breakpoint-down($sm) {
+      font-size: 3rem;
+      margin-right: 1.6rem;
+    }
+  }
+  &__price {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.1;
+    flex-grow: 1;
+
+    @include breakpoint-down($lg) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 4rem;
+      flex-basis: 50%;
+    }
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    border-radius: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+
+    @include breakpoint-down($lg) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 3rem;
+      padding: 1.2rem 2.4rem;
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+
+      @include breakpoint-down($lg) {
+        margin-bottom: 1.6rem;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 0.8rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 0 1.6rem 2.4rem;
+
+    @include breakpoint-down($lg) {
+      grid-column: span 2;
+      padding: 0;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-top: 3.2rem;
+      grid-column: auto;
+    }
+
+    picture {
+      flex-shrink: 0;
+      margin-right: 2.4rem;
+
+      @include breakpoint-down($lg) {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  &__total > &__footer {
+    @include breakpoint-down($lg) {
+      margin-top: 0;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: 8rem;
+    }
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+
+    @include breakpoint-down($lg) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 3.2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 2.4rem;
+
+      @include breakpoint-down($lg) {
+        margin-bottom: 1.6rem;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    & > span {
+      font-size: 1.6rem;
+      line-height: 1;
+      border-radius: 0.8rem;
+      padding: 0.6rem 1.2rem;
+      color: #fff;
+      font-family: Aeonik Pro;
+      white-space: nowrap;
+
+      @include breakpoint-down($lg) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint-down($sm) {
+        font-size: 3rem;
+        padding: 0.8rem 2.4rem;
+        border-radius: 1.6rem;
+      }
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 6.9rem;
+    height: 6.9rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    object-position: center;
+    border-radius: 50%;
+
+    @include breakpoint-down($lg) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+
+    @include breakpoint-down($sm) {
+      width: 8.4rem;
+      height: 8.4rem;
+    }
+  }
+
+  &__caption {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    vertical-align: baseline;
+
+    @include breakpoint-down($sm) {
+      font-size: 3rem;
+      line-height: 1.3;
+      flex-basis: 75%;
+    }
+  }
+
+  &__mail {
+    vertical-align: baseline;
+    color: #006699;
+  }
+
+  &__copy {
+    vertical-align: middle;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    @include breakpoint-down($sm) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+}
