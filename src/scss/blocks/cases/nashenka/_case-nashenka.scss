@@ -88,4 +88,23 @@
     display: block;
     object-fit: cover;
   }
+
+  &__content-block {
+    border-radius: 4rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    @include breakpoint-down($lg) {
+    }
+
+    @include breakpoint-down($sm) {
+      border-radius: 2.5rem;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }  
 }

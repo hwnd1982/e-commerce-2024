@@ -15,6 +15,14 @@
   ],
   client: 'Oдна из крупнейших в России сетей гипермаркетов по продаже товаров для дома, дачи и ремонта.',
 } %}
+{% set result = {
+  text: [
+    'Это очень интересный опыт параллельного переноса двух сложных систем на другие платформы одновременно. Важно было не потерять связь между сайтом и PimCore. PIM стал для нас новым, но очень быстро родным и понятным. Во время адаптации и доработки системы под нужды клиента мы увидели границы возможностей системы, что упростит работу с ней в дальнейшем, в том числе в поддержке системы в рамках данного проекта. Не менее важно было в условиях запуска MVP-версии сайта сохранить весь рабочий функционал и все текущие интеграции. Все интеграции со сторонними системами без исключения были кастомизированы для обеспечения необходимого функционала работы сайта. В условиях запуска не полного функционала мы, конечно, продолжаем работать над его расширением и улучшением, чему очень рады. <br> Спасибо команде клиента за отзывчивость и оперативное взаимодействие, и отдельная благодарность нашей внутренней команде супер ответственных ребят.',
+  ],
+  src: "./img/result/shajdulatova.jpg",
+  caption: "Карина Шайдулатова",
+  role: "group head iBRUSH"
+} %}
 
 {% set review = {
   text: [
@@ -28,13 +36,227 @@
 } %}
 
 {% set modalContent %}
-
-
   <div class="case-content">
     {% include "../cases-main.twig" with { props: content } only %}
     {# Контент #}
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Аналитика</h2>
+          <p class="case-kixbox-section__text">На первом этапе мы проводили детальную аналитику: интервьюировали менеджеров, которые работают в PIM и составляли список функциональных требований. Было важно понять, что требуется специалистам в системе для полноценной и комфортной работы.</p>
+          <div class="case-kixbox-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/kixbox/1-mobile.png 1x,
+              ./img/cases/kixbox/1-mobile@2x.png 2x" width="" height="183">
+              <img class="case-kixbox-section__img" src="./img/cases/kixbox/1.png" 
+              srcset="./img/cases/kixbox/1@2x.png 2x" width="" height="677" alt="Аналитика" loading="lazy">
+            </picture>
+          </div>
+          <p class="case-kixbox-section__text">После этого дорабатывали PimCore в соответствии с этими требования: писали дополнительные модули, настраивали внутренний функционал, чтобы в итоге получить систему, в которой менеджеры смогут управлять всей информацией о товарах, заносить их в систему и актуализировать в зависимости от изменений у поставщиков.
+            Основная проблема была в том, что у клиента более 12000 типов товаров (от аэрогрилей до зубных щёток), но PimCore не предусматривает такого ассортимента в своей базовой версии.</p>
+        </div>
 
+        <div class="case-kixbox-section__img-block">
+          <picture>
+            <source media="(max-width: 767px)"
+            srcset="./img/cases/kixbox/1-1-mobile.png 1x,
+            ./img/cases/kixbox/1-1-mobile@2x.png 2x" width="" height="345">
+            <img class="case-kixbox-section__img" src="./img/cases/kixbox/1-1.png" 
+            srcset="./img/cases/kixbox/1-1@2x.png 2x" width="" height="780" alt="Аналитика" loading="lazy">
+          </picture>
+        </div>
+
+        <picture>
+          <source media="(max-width: 767px)"
+          srcset="./img/cases/kixbox/1-2-mobile.png 1x,
+          ./img/cases/kixbox/1-2-mobile@2x.png 2x" width="" height="689">
+          <img class="case-kixbox-section__img" src="./img/cases/kixbox/1-2.png" 
+          srcset="./img/cases/kixbox/1-2@2x.png 2x" width="" height="800" alt="Аналитика" loading="lazy">
+        </picture>    
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Есть 2 типа экспорта  данных из PimCore</h2>              
+          <div class="case-kixbox-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/kixbox/2-mobile.png 1x,
+              ./img/cases/kixbox/2-mobile@2x.png 2x" width="" height="395">
+              <img class="case-kixbox-section__img" src="./img/cases/kixbox/2.png" 
+              srcset="./img/cases/kixbox/2@2x.png 2x" width="" height="155" alt="Два типа экспорта данных из PimCore" loading="lazy">
+            </picture>
+          </div>
+          <p class="case-kixbox-section__text">
+            Экспорт на сайт реализован в механике рабочего процесса, то есть начальная информация перед публикацией проверяется на процент заполненности. Также есть экспорт категорий на сайт для актуализации структуры каталога. 
+            На текущий момент экспорт из PIM производится только на сайт, но система предусматривает экспорт данных во множество мест (от рекламных площадок до ведения соцсетей).
+          </p>  
+        </div>     
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Импорт данных в PimCore</h2>
+          <div class="case-kixbox-section__list-block">          
+            <p>Мы реализовали:</p>
+            <ul>
+              <li>несколько видов импорта для возможности массовой загрузки типов, деревьев каталога (как потребительского, так и коммерческого),</li>
+              <li>загрузку справочников, и, наконец, самих товаров. </li>
+            </ul>
+            <p>Для импорта товаров создали систему распознавания значений для упрощения загрузки данных. Иначе без этого для каждого типа товара необходимо было бы пользоваться своим импортом по конкретному типу.</p>
+          </div>
+        </div>   
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Система распознавания для упрощения загрузки</h2>              
+          <p class="case-kixbox-section__text">В самом начале у нас был солидный воркфлоу, реализованный нами, с переходами от статуса к статусу (где-то автоматом, а где-то вручную в зависимости от процесса) с разбивкой доступности к тому или иному статусу для изменений конкретной роли. Это было реализовано, исходя из функциональных требований, написанных во время интервью.</p>
+          <p class="case-kixbox-section__text">Так как процессы внутри клиента во время реализации работ менялись, воркфлоу как таковой был упразднён, как и некоторые роли. Мы реализовали немного другой подход к работе со статусами, и их автоматизированные переходы в зависимости от процента или конкретных полей заполненности. Роли с усечёнными правами также остались. Так резко свернуть в направлении разработки помогло как раз то, что мы работали выделенными командами. </p>
+        </div>     
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Выделенные IT-команды</h2>              
+          <p class="case-kixbox-section__text">Процесс сейчас состоит из байера, собирающего данные с поставщиков с помощью экспорта файла для заполнения, и импорта файла с заполненными данными в PIM.</p>
+          <p class="case-kixbox-section__text">В PIM попадают данные характеристик товара. После этого заполняются данные (текстовые и картинки) в самой системе контент менеджерами, и после проверки заполненности и корректности товар ставится в публикацию на сайт. Публикация на сайт также есть экстренная (сейчас нужно выгрузить этот товар срочно) и штатная — запланированная.</p>
+        </div>
+        <div class="case-kixbox-section__img-block custom-scroll">
+          <picture>
+            <source media="(max-width: 767px)"
+            srcset="./img/cases/kixbox/3-mobile.png 1x,
+            ./img/cases/kixbox/3-mobile@2x.png 2x" width="881" height="246">
+            <img class="case-kixbox-section__img case-kixbox-section__img_scroll" src="./img/cases/kixbox/3.png" 
+            srcset="./img/cases/kixbox/3@2x.png 2x" width="" height="464" alt="Импорт данных в PimCore" loading="lazy">
+          </picture>
+        </div>
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <div class="case-kixbox-section__block">
+            <div>
+              <h2 class="case-kixbox-section__title">Сайт</h2>              
+              <p class="case-kixbox-section__text">У клиента был сайт на Magento, который требовалось оперативно перенести на Битрикс, сохранив весь его функционал.</p>
+              <p class="case-kixbox-section__text">Основная сложность была в том, что нужно было забрать с фронта всю информацию самостоятельно и перенести на Битрикс, так как вся документация была утеряна, а люди, которые его делали, уже в компании не работают. Помимо этого нужно было интегрироваться с существующим эквайрингом и впоследствии добавить новый. А затем интегрировать PimСore с Битрикс, чтобы товары и категории поступали непосредственно на сайт из системы.</p>        
+            </div>
+            <div class="case-kixbox-section__img-right">
+              <picture>
+                <source media="(max-width: 767px)"
+                srcset="./img/cases/kixbox/4-mobile.png 1x,
+                ./img/cases/kixbox/4-mobile@2x.png 2x" width="" height="543">
+                <img class="case-kixbox-section__img" src="./img/cases/kixbox/4.png" 
+                srcset="./img/cases/kixbox/4@2x.png 2x" width="490" height="579" alt="Сайт" loading="lazy">
+              </picture>
+            </div>
+          </div>            
+        </div>  
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Помимо этого сайт интегрирован с</h2> 
+          <div class="case-kixbox-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/kixbox/5-mobile.png 1x,
+              ./img/cases/kixbox/5-mobile@2x.png 2x" width="" height="1049">
+              <img class="case-kixbox-section__img" src="./img/cases/kixbox/5.png" 
+              srcset="./img/cases/kixbox/5@2x.png 2x" width="" height="717" alt="Список с чем сайт интегрирован" loading="lazy">
+            </picture>
+          </div>         
+          <p class="case-kixbox-section__text">Касторама – большой продукт, где очень многое в процессах и логике появилось эволюционно. Мы перенесли основной функционал, но остались ряд правок и решений, которые будут реализованы в процессе развития сайта.</p>
+        </div> 
+        <div class="case-kixbox-section__img-block">
+          <picture>
+            <source media="(max-width: 767px)"
+            srcset="./img/cases/kixbox/5-1-mobile.png 1x,
+            ./img/cases/kixbox/5-1-mobile@2x.png 2x" width="" height="1342">
+            <img class="case-kixbox-section__img" src="./img/cases/kixbox/5-1.png" 
+            srcset="./img/cases/kixbox/5-1@2x.png 2x" width="" height="870" alt="Кастомизация" loading="lazy">
+          </picture>
+        </div>        
+      </section>
+      
+      <section class="case-kixbox-section">
+        <div class="container">
+          <h2 class="case-kixbox-section__title">Поиск использует несколько систем</h2> 
+          <div class="case-kixbox-section__img-block">
+            <picture>
+              {# не хватает картинок на моб #}
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/kixbox/6.png 1x,
+              ./img/cases/kixbox/6@2x.png 2x" width="" height="309">
+              <img class="case-kixbox-section__img" src="./img/cases/kixbox/6.png" 
+              srcset="./img/cases/kixbox/6@2x.png 2x" width="" height="221" alt="Системы поиска" loading="lazy">
+            </picture>
+          </div>         
+          <p class="case-kixbox-section__text">Помимо этого разработана система правил каталога, которая позволяет по различным условиям продвигать определённые товары в поисковой выдаче и на страницах каталога.</p>
+          <p class="case-kixbox-section__text">API и PL</p>
+        </div> 
+        <div class="case-kixbox-section__img-block">
+          <picture>
+          {# не хватает картинок на моб #}
+            <source media="(max-width: 767px)"
+            srcset="./img/cases/kixbox/6-1.png 1x,
+            ./img/cases/kixbox/6-1@2x.png 2x" width="" height="344">
+            <img class="case-kixbox-section__img" src="./img/cases/kixbox/6-1.png" 
+            srcset="./img/cases/kixbox/6-1@2x.png 2x" width="" height="835" alt="Поиск" loading="lazy">
+          </picture>
+        </div>        
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="container">
+          <div class="case-kixbox-section__block">
+            <div>
+              <h2 class="case-kixbox-section__title">Gestori</h2>              
+              <p class="case-kixbox-section__text">Из Гестери мы получаем обновление по остаткам и ценам. На основании цены за прошлый день и за текущий рассчитывается наличие скидки — если есть разница. Обновления по стокам приходят раз в сутки и раз в 15 минут.</p>
+            </div>
+            <div class="case-kixbox-section__img-right">
+              <picture>
+              {# не хватает картинок на моб #}
+                <source media="(max-width: 767px)"
+                srcset="./img/cases/kixbox/7.png 1x,
+                ./img/cases/kixbox/7@2x.png 2x" width="" height="344">
+                <img class="case-kixbox-section__img" src="./img/cases/kixbox/7.png" 
+                srcset="./img/cases/kixbox/7@2x.png 2x" width="747" height="470" alt="Gestori" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="case-kixbox-section__img-block">
+          <picture>
+          {# не хватает картинок на моб #}
+            <source media="(max-width: 767px)"
+            srcset="./img/cases/kixbox/7-1.png 1x,
+            ./img/cases/kixbox/7-1@2x.png 2x" width="" height="1200">
+            <img class="case-kixbox-section__img" src="./img/cases/kixbox/7-1.png" 
+            srcset="./img/cases/kixbox/7-1@2x.png 2x" width="" height="610" alt="Gestori" loading="lazy">
+          </picture>
+        </div>
+      </section>
+
+      <section class="case-kixbox-section">
+        <div class="case-kixbox-section__block">
+          <div class="case-kixbox-section__container">
+            <h2 class="case-kixbox-section__title">Retail Rocket</h2>              
+            <p class="case-kixbox-section__text">Проинтегрирована рекомендательная система Retail Rocket: блоки для вывода в карточках товаров и на главной странице. Также реализована триггерная рассылка.</p>
+          </div>
+          <div class="case-kixbox-section__img-right custom-scroll">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/kixbox/8-mobile.png 1x,
+              ./img/cases/kixbox/8-mobile@2x.png 2x" width="1085" height="344">
+              <img class="case-kixbox-section__img case-kixbox-section__img_scroll" src="./img/cases/kixbox/8.png" 
+              srcset="./img/cases/kixbox/8@2x.png 2x" width="" height="448" alt="Retail Rocket" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
     {#  #}
+    {% include '../../blocks/result.twig' with { props: result} only %}
     {% include '../../blocks/review.twig' with  { props: review} only %}
     {% include "../cases-slider.twig" with { props: props } only %}
     {% include "../../blocks/design-support-request.twig" with {
