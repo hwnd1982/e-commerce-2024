@@ -30,20 +30,195 @@
 } %}
 
 {% set modalContent %}
-  <div class="case-content">
-    {% include "../cases-main.twig" with { props: content } only %}
-    {#  #}
+<div class="case-content">
+	{% include "../cases-main.twig" with { props: content } only %}
+	{#  #}
 
-    {#  #}
-    {% include '../../blocks/result.twig' with { props: result} only %}
-    {% include "../cases-slider.twig" with { props: props } only %}
-    {% include "../../blocks/design-support-request.twig" with {
+	<section class="case-monsher-section">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Аналитика и прототипы</h2>
+			<p class="case-monsher-section__text case-monsher-section__text_mb0">
+				Начали аналитику с&nbsp;целей бизнеса, которые нужно достичь за&nbsp;счет редизайна сайта.
+				Также выяснили существующие ограничения и&nbsp;особенности бизнес-процессов. Далее составили
+				5&nbsp;портретов&nbsp;ЦА, чтобы построить пользовательский путь и&nbsp;определить барьеры
+				для каждого из&nbsp;них. В&nbsp;рамках конкурентного анализа мы&nbsp;изучили 15&nbsp;брендов.
+				Внимательно изучили каждый по&nbsp;нескольким параметрам и&nbsp;выделили плюсы и&nbsp;минусы,
+				удачные и&nbsp;неудачные решения.
+			</p>
+			<p class="case-monsher-section__text">
+				В итоге получили детальный CJM, проработанную структуру сайта и главные чек-поинты для покупателей, 
+				которые главным образом влияют на их решение о покупке. На основе аналитики разработали более 60+ прототипов.
+			</p>
+
+			<div class="case-monsher-section__img">
+				<picture>
+					<source media="(max-width: 760px)" srcset="./img/cases/monsher/prototype-mobile.png 1x,
+						./img/cases/monsher/prototype-mobile@2x.png 2x" width="353" height="943">
+					<img src="./img/cases/monsher/prototype.png" 
+            srcset="./img/cases/monsher/prototype@2x.png 2x" width="" height="1055" alt="" loading="lazy">
+				</picture>
+			</div>
+		</div> 
+	</section>
+
+	<div class="case-monsher-section__bg-gradient">
+		<div class="case-monsher-section__img case-monsher-section__img_mob">
+			<img src="./img/cases/monsher/prototype-2-2-mobile.png" 
+        srcset="./img/cases/monsher/prototype-2-2-mobile@2x.png 2x" width="" height="725" alt="" loading="lazy">
+		</div>
+		<div class="case-monsher-section__img">
+			<picture>
+				<source media="(max-width: 760px)" srcset="./img/cases/monsher/prototype-2-mobile.png 1x,
+					./img/cases/monsher/prototype-2-mobile@2x.png 2x" width="353" height="943">
+				<img src="./img/cases/monsher/prototype-2.png" 
+          srcset="./img/cases/monsher/prototype-2@2x.png 2x" width="1920" height="851" alt="" loading="lazy">
+			</picture>
+		</div>
+	</div>
+
+	<section class="case-monsher-section case-monsher-section__bg">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Главная</h2>
+			<p class="case-monsher-section__text case-monsher-section__text_mb0">
+				Нестандарный и&nbsp;утонченный дизайн отражает ценности и&nbsp;стиль бренда. Главная
+				страница включает понятную навигацию, что облегчает пользователям перемещение по&nbsp;сайту.
+			</p>
+			<p class="case-monsher-section__text case-monsher-section__text_mb0">
+				На&nbsp;странице сразу представлены товары, чтобы покупатель мог сразу перейти к&nbsp;покупкам.
+				Также блоки для тех, кто хочет узнать о&nbsp;преимуществах бренда, посмотреть последние	коллекции.
+			</p>
+		</div>
+	</section>
+
+	<div class="case-monsher-section__video-wrapper">
+		<picture>
+			<source media="(max-width: 760px)" srcset="./img/cases/monsher/main-mobile.png 1x,
+				./img/cases/monsher/main-mobile@2x.png 2x" width="353" height="370">
+			<img src="./img/cases/monsher/main.png" 
+      srcset="./img/cases/monsher/main@2x.png 2x" width="1920" height="821" alt="" loading="lazy">
+		</picture>
+
+		<div class="case-monsher-section__video-block">
+			<div class="case-monsher-section__video">
+				<video autoplay playsinline muted loop width="839">
+					<source src="./assets/monsher-main.mov" type="video/mov">
+					<source src="./assets/monsher-main.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<div class="case-monsher-section__img">
+		<picture>
+			<source media="(max-width: 760px)" srcset="./img/cases/monsher/mobile-mobile.png 1x,
+				./img/cases/monsher/mobile-mobile@2x.png 2x" width="353" height="754">
+			<img src="./img/cases/monsher/mobile.jpg" 
+        srcset="./img/cases/monsher/mobile@2x.jpg 2x" width="1924" height="1494" alt="Интерфейс сайта и заслуги" loading="lazy">
+		</picture>
+	</div>
+
+	<section class="case-monsher-section">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Каталог</h2>
+			<p class="case-monsher-section__text">
+				Каталог&nbsp;— одна из&nbsp;важнейших страниц, в&nbsp;которой мы&nbsp;создали
+				интуитивно понятную навигацию. Пользователи легко находят категории и&nbsp;подкатегории
+				товаров, используют фильтры и&nbsp;сортировку. Карточки товаров включают основные детали:
+				цену, характеристики и&nbsp;скидки.	Они получились информативными, но&nbsp;не&nbsp;перегруженными.
+			</p>
+			<div class="case-monsher-section__img">
+				<picture>
+					<source media="(max-width: 760px)" srcset="./img/cases/monsher/catalog-mobile.png 1x,
+						./img/cases/monsher/catalog-mobile@2x.png 2x" width="353" height="943">
+					<img src="./img/cases/monsher/catalog.png" 
+            srcset="./img/cases/monsher/catalog@2x.png 2x" width="1273" height="1742" alt="Интерфейс сайта и заслуги" loading="lazy">
+				</picture>
+			</div>
+		</div>
+	</section>
+
+	<div class="case-monsher-section__video-catalog">
+		<video autoplay="" playsinline="" loop="" muted="" width="1920" height="658">
+			<source src="./assets/monsher-catalog.mp4" type="video/mp4">
+		</video>
+		<video autoplay="" playsinline="" loop="" muted="" width="375" height="686">
+			<source src="./assets/monsher-catalog-mob.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<section class="case-monsher-section">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Корзина и оформление заказа</h2>
+			<p class="case-monsher-section__text">
+				Оформить заказ просто и удобно. Пользователь может выбрать гостевой режим, когда заказ оформляется в 1 клик, или зарегистрировать аккаунт, чтобы участвовать в программе лояльности. Доступны все способы оплаты: от оплаты картой на сайте до рассрочки.
+			</p>
+			<div class="case-monsher-section__img case-monsher-section__img_mb">
+				<picture>
+					<source media="(max-width: 760px)" srcset="./img/cases/monsher/cart-order-mobile.png 1x,
+						./img/cases/monsher/cart-order-mobile@2x.png 2x" width="343" height="909">
+					<img src="/img/cases/monsher/cart-order.png" 
+          srcset="./img/cases/monsher/cart-order@2x.png 2x" width="1277" height="1624" alt="Интерфейс сайта и заслуги" loading="lazy">
+				</picture>
+			</div>
+		</div>
+		<div class="case-monsher-section__img">
+			<picture>
+				<source media="(max-width: 760px)" srcset="./img/cases/monsher/ui-mobile.png 1x,
+          ./img/cases/monsher/ui-mobile@2x.png 2x" width="343" height="1256">
+				<img src="./img/cases/monsher/ui.png" 
+        srcset="./img/cases/monsher/ui@2x.png 2x" width="1920" height="1943" alt="Интерфейс сайта и заслуги" loading="lazy">
+			</picture>
+		</div>
+	</section>
+
+	<section class="case-monsher-section">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Концепции</h2>
+			<p class="case-monsher-section__text">
+				Предложили несколько концепций дизайна клиенту. Очень разные варианты, чтобы была
+				возможность взглянуть на&nbsp;бренд с&nbsp;нескольких сторон.
+			</p>
+			<div class="case-monsher-section__img case-monsher-section__img_concept">
+				<picture>
+					<source media="(max-width: 760px)" srcset="./img/cases/monsher/concept-mobile.png 1x,
+						./img/cases/monsher/concept-mobile@2x.png 2x" width="" height="253">
+					<img src="./img/cases/monsher/concept.png" 
+          srcset="./img/cases/monsher/concept@2x.png 2x" width="690" height="518" alt="Концепция главной страницы" loading="lazy">
+				</picture>
+			</div>
+		</div>
+	</section>
+
+	<div class="case-monsher-section__img">
+		<picture>
+			<source media="(max-width: 760px)" srcset="./img/cases/monsher/concepts-mobile.png 1x,
+				./img/cases/monsher/concepts-mobile@2x.png 2x" width="" height="155">
+			<img src="./img/cases/monsher/concepts.png" 
+      srcset="./img/cases/monsher/concepts@2x.png 2x" width="1678" height="586" alt="Концепция главной страницы" loading="lazy">
+		</picture>
+	</div>
+
+	<section class="case-monsher-section">
+		<div class="container">
+			<h2 class="case-monsher-section__title">Особенности разработки</h2>
+			<p class="case-monsher-section__text case-monsher-section__text_mb0">
+				Мы&nbsp;написали кастомный компонент для оформления заказа с&nbsp;использованием vue.js
+			  Реализовали возможность выбора из&nbsp;сохраненных адресов, изменять получателей заказа,
+			  выбирать дату и&nbsp;время доставки курьером. Также написали функционал для
+			  блоков «избранные товары» и&nbsp;«сравнение товаров», не&nbsp;используя
+			  компоненты Битрикс.
+			</p>
+		</div>
+	</section>
+
+
+	{#  #}
+	{% include '../../blocks/result.twig' with { props: result} only %}
+	{% include "../cases-slider.twig" with { props: props } only %}
+	{% include "../../blocks/design-support-request.twig" with {
       props: { id: props.currentID, }
-    } %}
-  </div>
-{% endset %}
-
-{% include "../../ui/modal.twig" with {
+    } %}</div>
+{% endset %}{% include "../../ui/modal.twig" with {
   props: {
     id: "case-monsher-modal",
     class: "case-modal",
