@@ -45,7 +45,122 @@
   <div class="case-content">
     {% include "../cases-main.twig" with { props: content } only %}
     {#  #}
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Главная страница</h2>
+          <p class="case-nashenka-section__text">На ней покупатель сразу видит все ключевые разделы интернет-магазина. Тут же он может ознакомиться с каталогом, скидками и акциями.</p>
+          <p class="case-nashenka-section__text">Но самое важное – корзина, которая всегда перед глазами, чтобы ничего не забыть или не положить лишнего.</p>        
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/1-mobile.png 1x,
+              ./img/cases/nashenka/1-mobile@2x.png 2x" width="" height="1064">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/1.png" 
+              srcset="./img/cases/nashenka/1@2x.png 2x" width="" height="1576" alt="Главная страница" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
 
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Выбор доставки</h2>
+          <p class="case-nashenka-section__text">На ней покупатель сразу видит все ключевые разделы интернет-магазина. Тут же он может ознакомиться с каталогом, скидками и акциями.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/2-mobile.png 1x,
+              ./img/cases/nashenka/2-mobile@2x.png 2x" width="" height="1108">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/2.png" 
+              srcset="./img/cases/nashenka/2@2x.png 2x" width="" height="1179" alt="Выбор доставки" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Каталог</h2>
+          <p class="case-nashenka-section__text">Помимо привычных фильтров мы добавили теги. Теперь подобрать продукты «на супчик» можно без постоянного заглядывания в рецепт, а просто настроить фильтр. Важная механика на сайте — доступность дат для доставки товара, которую мы лакончино вписали и в карточки каталога.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/3-mobile.png 1x,
+              ./img/cases/nashenka/3-mobile@2x.png 2x" width="" height="747">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/3.png" 
+              srcset="./img/cases/nashenka/3@2x.png 2x" width="" height="1458" alt="Выбор доставки" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Карточка товара</h2>
+          <p class="case-nashenka-section__text">Для каждого человека важно знать как можно больше о том, что он ест. И куда проще решиться на заказ, если ты видишь исчерпывающую информацию о продукте.Одно из важных преимуществ клиента – свежесть первого дня. Чтобы это гарантировать, у каждого продукта на карточке указана дата, когда он будет доступен для доставки.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/4-mobile.png 1x,
+              ./img/cases/nashenka/4-mobile@2x.png 2x" width="" height="747">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/4.png" 
+              srcset="./img/cases/nashenka/4@2x.png 2x" width="" height="1725" alt="Карточка товара" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Корзина</h2>
+          <p class="case-nashenka-section__text">Когда вы идете по магазину, то катите тележку впереди или несете корзину в руках. Всегда можете глянуть, что вы уже положили в нее. Этот принцип мы реализовали и в интернет-магазине. Корзина всегда видна справа на десктопе и вызывается кнопкой и убирается смахиванием на мобильных.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/5-mobile.png 1x,
+              ./img/cases/nashenka/5-mobile@2x.png 2x" width="" height="1378">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/5.png" 
+              srcset="./img/cases/nashenka/5@2x.png 2x" width="" height="1543" alt="Карточка товара" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nashenka-section">
+        <div class="container">
+          <h2 class="case-nashenka-section__title">Оформление заказа</h2>
+          <p class="case-nashenka-section__text">Этап оформления заказа сделали бесшовным. Вся информация на одной странице, включая все детали по времени и условиям доставки. Но мы добавили в этот этап один важный и приятный момент для покупателя – доступные промокоды. Обычно они появляются где-то на сайте, их надо запомнить или скопировать. А если этого не сделать, то придется искать его заново. Мы избавили покупателя от этого, добавив промокоды на этапе оформления заказа.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/6-mobile.png 1x,
+              ./img/cases/nashenka/6-mobile@2x.png 2x" width="" height="874">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/6.png" 
+              srcset="./img/cases/nashenka/6@2x.png 2x" width="" height="1297" alt="Оформление заказа" loading="lazy">
+            </picture>
+          </div>
+          <p class="case-nashenka-section__text">Личный кабинет удобный и простой. Тут хранится вся информация покупателя. Отсюда можно взять заказ и повторить его полностью или только частично.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/6-1-mobile.png 1x,
+              ./img/cases/nashenka/6-1-mobile@2x.png 2x" width="" height="232">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/6-1.png" 
+              srcset="./img/cases/nashenka/6-1@2x.png 2x" width="" height="877" alt="Оформление заказа" loading="lazy">
+            </picture>
+          </div>
+          <p class="case-nashenka-section__text">Мы разработали множество ярких и информативных страниц, которые рассказывают о фабрике, продукции и возможностях приготовления вкусных блюд.</p>
+          <div class="case-nashenka-section__img-block">
+            <picture>
+              <source media="(max-width: 767px)"
+              srcset="./img/cases/nashenka/6-2-mobile.png 1x,
+              ./img/cases/nashenka/6-2-mobile@2x.png 2x" width="" height="363">
+              <img class="case-nashenka-section__img" src="./img/cases/nashenka/6-2.png" 
+              srcset="./img/cases/nashenka/6-2@2x.png 2x" width="" height="1378" alt="Оформление заказа" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
     {#  #}
     {% include '../../blocks/result.twig' with { props: result} only %}
     {% include '../../blocks/review.twig' with  { props: review} only %}
