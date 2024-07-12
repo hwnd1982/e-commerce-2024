@@ -36,6 +36,10 @@
     margin-bottom: 8rem;
     max-width: 75rem;
 
+    @include breakpoint-down($xxl) {
+      margin-bottom: 6rem;
+    }
+
     @include breakpoint-down($sm) {
       font-size: 3.2rem;
       line-height: 1.6;
@@ -107,6 +111,10 @@
     background: linear-gradient(180deg, #d4d0c9 0%, #f4efec 98.66%);
     padding-bottom: 8rem;
     margin-top: -3px;
+
+    @include breakpoint-down($xxl) {
+      padding-bottom: 6rem;
+    }
 
     @include breakpoint-down($sm) {
       background: linear-gradient(0%, #d4d0c9 0%, #f4efec 0%);
