@@ -1,6 +1,10 @@
 .cap {
   padding: 15rem 0 23rem;
 
+  @include breakpoint-down($xxl) {
+    padding: 12rem 0 18rem;
+  }
+
   @include breakpoint-down($lg) {
     padding: 8rem 0 10rem;
   }
@@ -14,6 +18,12 @@
     font-weight: 500;
     line-height: 1.1;
     text-align: center;
+    max-width: 153.8rem;
+
+    @include breakpoint-down($xxl) {
+      font-size: 6.2rem;
+      max-width: 111.6rem;
+    }
 
     @include breakpoint-down($lg) {
       font-size: 4.2rem;

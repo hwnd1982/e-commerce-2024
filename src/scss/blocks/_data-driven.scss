@@ -3,6 +3,10 @@
   overflow: hidden;
   border-bottom: 1px solid #c8c8c8;
 
+  @include breakpoint-down($xxl) {
+    padding: 10rem 0 0;
+  }
+
   @include breakpoint-down($lg) {
     padding: 8rem 0 0;
   }
@@ -26,7 +30,7 @@
     position: relative;
     width: 100%;
     max-width: 90rem;
-    padding: 10rem 0.8rem 11rem;
+    padding: 10rem 0 11rem;
 
     @include breakpoint-down($lg) {
       max-width: 64rem;
@@ -110,7 +114,7 @@
         content: "→";
         display: inline-block;
         vertical-align: middle;
-        padding: 0 1em;
+        padding: 0 0.6em;
       }
     }
   }
@@ -146,6 +150,10 @@
         width: 2.7rem;
         height: 2.7rem;
 
+        @include breakpoint-down($xxl) {
+          left: -8.9rem;
+        }
+
         @include breakpoint-down($lg) {
           width: 2.4rem;
           height: 2.4rem;
@@ -168,6 +176,12 @@
         top: 1.6rem;
         right: -23.9rem;
 
+        @include breakpoint-down($xxl) {
+          width: 3.6rem;
+          height: 3.6rem;
+          right: -5.1rem;
+        }
+
         @include breakpoint-down($lg) {
           right: -4rem;
           width: 2.8rem;
@@ -185,6 +199,10 @@
         height: 5rem;
         right: -9.6rem;
         bottom: 8.3rem;
+
+        @include breakpoint-down($xxl) {
+          right: -13.2rem;
+        }
 
         @include breakpoint-down($lg) {
           bottom: 1.6rem;
@@ -208,6 +226,12 @@
         right: -30.5rem;
         top: 19.2rem;
 
+        @include breakpoint-down($xxl) {
+          width: 11rem;
+          height: 11rem;
+          right: -13.7rem;
+        }
+
         @include breakpoint-down($lg) {
           width: 7rem;
           height: 7rem;
@@ -226,6 +250,12 @@
         height: 13.5rem;
         left: -22.2rem;
         bottom: 13.4rem;
+
+        @include breakpoint-down($xxl) {
+          width: 11rem;
+          height: 11rem;
+          left: -15.6rem;
+        }
 
         @include breakpoint-down($lg) {
           width: 7rem;

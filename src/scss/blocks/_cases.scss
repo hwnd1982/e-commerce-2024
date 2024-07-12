@@ -4,6 +4,9 @@
     outline: 0.8rem solid #fff;
     outline-offset: -0.8rem;
 
+    @include breakpoint-down($xxl) {
+    }
+
     @include breakpoint-down($lg) {
       padding-right: 1.6rem;
       padding-left: 1.6rem;
@@ -34,6 +37,10 @@
     outline: 0.8rem solid #fff;
     outline-offset: -0.4rem;
     cursor: pointer;
+
+    @include breakpoint-down($xxl) {
+      padding: 1.4rem;
+    }
 
     @include breakpoint-down($lg) {
       grid-column: auto;

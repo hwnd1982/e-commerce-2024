@@ -7,6 +7,10 @@
 .case-sarma-section {
   padding-top: 8rem;
 
+  @include breakpoint-down($xxl) {
+    padding-top: 6rem;
+  }
+
   @include breakpoint-down($sm) {
     padding-top: 11.2rem;
   }
@@ -150,7 +154,7 @@
   &__video-block {
     width: 100%;
     border-radius: 0.4rem;
-    background-image: url('../img/cases/sarma/video-block-bg.png');
+    background-image: url("../img/cases/sarma/video-block-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,12 +163,12 @@
     @include breakpoint-down($sm) {
       border-radius: 0.2rem;
       padding: 3.6rem 0;
-      background-image: url('../img/cases/sarma/video-block-bg-mob.png');
+      background-image: url("../img/cases/sarma/video-block-bg-mob.png");
     }
   }
 
   &__video-bg {
-    background-image: url('../img/cases/sarma/video-bg.png');
+    background-image: url("../img/cases/sarma/video-bg.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -175,7 +179,7 @@
     margin: 0 auto;
 
     @include breakpoint-down($sm) {
-      background-image: url('../img/cases/sarma/video-bg-mob.png');
+      background-image: url("../img/cases/sarma/video-bg-mob.png");
       border-radius: 0.2rem;
       width: 48.91rem;
       height: 37.48rem;

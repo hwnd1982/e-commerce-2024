@@ -4,7 +4,7 @@
     <div class="key-stages__items">
       <div class="key-stages__card">
         <div class="key-stages__card-header">
-          <p class="key-stages__card-title"><b>#1 Аналитика и UX/UI-дизайн</b></p>
+          <p class="key-stages__card-title">#1 Аналитика и UX/UI-дизайн</p>
         </div>
 
         <ul class="key-stages__card-column">
@@ -63,9 +63,9 @@
             <li class="key-stages__card-item">1C</li>
             <li class="key-stages__card-item">Мой склад</li>
             <li class="key-stages__card-item">Амо</li>
-            <li class="key-stages__card-item">Б24</li>
             <li class="key-stages__card-item">RetailCRM</li>
-            <li class="key-stages__card-item">+14</li>
+            <li class="key-stages__card-item">Б24</li>
+            <li class="key-stages__card-item" style="font-weight: 500;">+14</li>
           </ul>
         </div>
 
@@ -90,11 +90,22 @@
             <p class="key-stages__caption">Пришлите рассказ о своем проекте на почту
               <a href="welcome@ibrush.ru" class="key-stages__mail js-clipboard-mail">
               <span>welcome@ibrush.ru</span>
-              {% include '../ui/icon.twig' with {
-                props: {
-                  href: "copy",
-                  class: "key-stages__copy",
-              } } only %}
+              <span class="key-stages__clipboard">
+                {% include '../ui/icon.twig' with {
+                  props: {
+                    href: "copy",
+                    class: "key-stages__copy",
+                } } only %}
+              
+                <span class="key-stages__massage">
+                  Скопировано
+                  {% include '../ui/icon.twig' with {
+                  props: {
+                    href: "tip-top",
+                    class: "key-stages__massage-tip",
+                } } only %}
+                </span>
+              </span>
               </a>
             </p>
           </div>

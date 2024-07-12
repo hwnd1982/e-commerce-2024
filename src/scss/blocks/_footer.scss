@@ -26,6 +26,10 @@
     width: 100%;
     max-width: 60.6rem;
 
+    @include breakpoint-down($xxl) {
+      max-width: 59rem;
+    }
+
     @include breakpoint-down($lg) {
       max-width: 48.6rem;
     }
@@ -102,6 +106,10 @@
     width: 100%;
     max-width: 60.6rem;
     padding-left: 0.8rem;
+
+    @include breakpoint-down($xxl) {
+      max-width: 42.4rem;
+    }
 
     @include breakpoint-down($lg) {
       flex-direction: column;

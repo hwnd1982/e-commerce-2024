@@ -8,6 +8,10 @@
   position: relative;
   padding-top: 8rem;
 
+  @include breakpoint-down($xxl) {
+    padding-top: 6rem;
+  }
+
   @include breakpoint-down($lg) {
     padding-top: 4.2rem;
   }
@@ -54,6 +58,10 @@
 
   &__img-block {
     padding-top: 8rem;
+
+    @include breakpoint-down($xxl) {
+      padding-top: 6rem;
+    }
 
     @include breakpoint-down($lg) {
       padding-top: 4.2rem;

@@ -2,7 +2,12 @@
   overflow: hidden;
 
   &__inner {
-    max-width: 128rem;
+    // max-width: 128rem;
+    padding-right: 10rem;
+
+    @include breakpoint-down($xxl) {
+      padding-right: 1rem;
+    }
   }
 
   &__header {
@@ -31,6 +36,11 @@
       display: grid;
       grid-template-columns: 1fr 41rem;
       gap: 2.4rem;
+
+      @include breakpoint-down($xxl) {
+        grid-template-columns: 1fr 30rem;
+        gap: 3rem;
+      }
 
       @include breakpoint-down($lg) {
         grid-template-columns: 100%;
@@ -154,6 +164,12 @@
     padding-bottom: 8rem;
     border-bottom: 1px solid #e9eaec;
 
+    @include breakpoint-down($xxl) {
+      grid-template-columns: 1fr 30rem;
+      gap: 3rem;
+      padding-bottom: 6rem;
+    }
+
     @include breakpoint-down($lg) {
       padding-bottom: 4.2rem;
     }
@@ -224,6 +240,10 @@
       margin-bottom: 1.6rem;
     }
 
+    @include breakpoint-down($xxl) {
+      font-size: 2rem;
+    }
+
     @include breakpoint-down($lg) {
       font-size: 1.8rem;
     }
@@ -259,6 +279,8 @@
     padding-left: 0;
     padding-right: 0;
     max-width: 137.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 
     @include breakpoint-down($lg) {
       padding-left: 1.6rem;

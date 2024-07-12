@@ -131,6 +131,10 @@
   &__phone {
     margin-right: 3.8rem;
 
+    @include breakpoint-down($xxl) {
+      margin-right: 3.2rem;
+    }
+
     @include breakpoint-down($lg) {
       display: none;
     }
@@ -157,6 +161,10 @@
 
   &__brief {
     margin-left: 9.2rem;
+
+    @include breakpoint-down($xxl) {
+      margin-left: 3.2rem;
+    }
 
     @include breakpoint-down($lg) {
       margin-left: 0;

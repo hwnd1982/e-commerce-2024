@@ -1,6 +1,10 @@
 .design-support-request {
   padding: 8rem 0 16rem;
 
+  @include breakpoint-down($xxl) {
+    padding: 5rem 0 10rem;
+  }
+
   @include breakpoint-down($lg) {
     padding: 4rem 0 8rem;
   }
@@ -16,6 +20,11 @@
     padding: 5rem 10.2rem 5.6rem 5rem;
     border-radius: 0.8rem;
     background-color: #efefef;
+
+    @include breakpoint-down($xxl) {
+      gap: 1.2rem;
+      padding: 5rem 3rem 5.6rem 5rem;
+    }
 
     @include breakpoint-down($lg) {
       padding: 2.4rem 2.4rem 3.2rem;
