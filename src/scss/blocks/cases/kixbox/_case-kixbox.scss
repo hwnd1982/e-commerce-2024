@@ -37,7 +37,7 @@
 
   &__text,
   &__list-block {
-    max-width: 84rem;
+    max-width: 70rem;
     font-size: 1.6rem;
     line-height: 1.6;
 
@@ -85,6 +85,13 @@
 
       @include breakpoint-down($sm) {
         padding-bottom: 8rem;
+      }
+    }
+
+    &_min {
+      max-width: 60%;
+      @include breakpoint-down($lg) {
+        max-width: 100%;
       }
     }
 
