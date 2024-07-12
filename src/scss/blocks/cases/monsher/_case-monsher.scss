@@ -110,7 +110,7 @@
   &__bg {
     background: linear-gradient(180deg, #d4d0c9 0%, #f4efec 98.66%);
     padding-bottom: 8rem;
-    margin-top: -3px;
+    margin-top: -0.3rem;
 
     @include breakpoint-down($xxl) {
       padding-bottom: 6rem;
@@ -120,6 +120,7 @@
       background: linear-gradient(0%, #d4d0c9 0%, #f4efec 0%);
       padding-bottom: 11.2rem;
       margin-bottom: 2rem;
+      margin-top: -0.7rem;
     }
   }
 
@@ -224,7 +225,7 @@
 
     .case-monsher-section__img {
       @include breakpoint-down($sm) {
-        padding-top: 65px;
+        padding-top: 13rem;
       }
     }
   }

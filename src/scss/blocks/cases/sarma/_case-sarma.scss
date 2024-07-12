@@ -127,8 +127,11 @@
 
   &__img {
     border-radius: 0.4rem;
-    display: flex;
-    flex: 1 1 calc(50% - 5px);
+    flex: 1 1 calc(50% - 0.5rem);
+
+    @include breakpoint-down($xxl) {
+      flex-basis: calc(50% - 0.4rem);
+    }
 
     @include breakpoint-down($sm) {
       border-radius: 0.2rem;
@@ -144,7 +147,7 @@
   }
 
   &__imgs {
-    flex: 1 1 calc(50% - 5px);
+    flex: 1 1 calc(50% - 0.5rem);
     line-height: 0;
     display: flex;
     flex-direction: column;
@@ -152,9 +155,12 @@
     gap: 1rem;
 
     @include breakpoint-down($xxl) {
+      flex-basis: calc(50% - 0.4rem);
       gap: 0.8rem;
     }
+
     @include breakpoint-down($sm) {
+      flex-basis: 100%;
       gap: 1rem;
     }
 
