@@ -9,6 +9,7 @@
 
   @include breakpoint-down($lg) {
     padding: 8rem 0 0;
+    border: none;
   }
 
   @include breakpoint-down($sm) {
@@ -21,7 +22,14 @@
     align-items: center;
 
     @include breakpoint-down($lg) {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #c8c8c8;
+      }
     }
+
     @include breakpoint-down($sm) {
     }
   }

@@ -1,17 +1,29 @@
 .pros {
-  padding-bottom: 8rem;
+  padding-bottom: 15rem;
+  border: 1px solid #f2f2f2;
 
   @include breakpoint-down($xxl) {
     padding-bottom: 5rem;
+    border: none;
   }
   @include breakpoint-down($lg) {
-    padding-bottom: 4rem;
-  }
-  @include breakpoint-down($sm) {
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   &__container {
+    &::after {
+      @include breakpoint-down($lg) {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-bottom: 4rem;
+        border-bottom: 1px solid #c8c8c8;
+      }
+
+      @include breakpoint-down($sm) {
+        padding-bottom: 6.4rem;
+      }
+    }
   }
 
   &__grid {
