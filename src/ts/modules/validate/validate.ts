@@ -56,6 +56,7 @@ export class ValidateForm {
 
     const id = this.el.getAttribute("data-form-id");
 
+    console.log(`form.submit.${id}`);
     document.dispatchEvent(
       new CustomEvent(id ? `form.submit.${id}` : "form.submit", {
         detail: {

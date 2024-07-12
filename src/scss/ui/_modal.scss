@@ -109,7 +109,9 @@
   }
 
   .custom {
-    max-width: 55rem;
+    height: auto;
+    max-width: 62.8rem;
+    padding: 3rem;
     width: 100%;
 
     @include breakpoint-down($sm) {
@@ -122,25 +124,14 @@
       }
 
       &__title {
-        font-size: 2.4rem;
-        font-weight: 700;
-        line-height: calc(28 / 24);
-        letter-spacing: -0.025em;
-
-        @include breakpoint-down($sm) {
-          font-size: 2rem;
-          line-height: 1.2;
-        }
+        font-size: 4.8rem;
+        line-height: 1.2;
+        font-weight: 500;
+        text-align: center;
       }
 
       &__close {
-        width: 3.6rem;
-        height: 3.6rem;
-
-        @include breakpoint-down($sm) {
-          width: 3.2rem;
-          height: 3.2rem;
-        }
+        top: 0;
       }
 
       &__text {
@@ -164,5 +155,12 @@
 .modal:not(.is-active) {
   * {
     pointer-events: none !important;
+  }
+}
+
+.custom-modal {
+  .modal__wrapper {
+    align-items: center;
+    justify-content: center;
   }
 }

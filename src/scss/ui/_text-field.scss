@@ -24,6 +24,10 @@
       left: 4.8rem;
       font-size: 2.8rem;
     }
+
+    .is-error & {
+      color: $red;
+    }
   }
 
   &__input {
@@ -56,6 +60,19 @@
     &.is-lock {
       pointer-events: none;
       color: $text-gray;
+    }
+
+    .is-error & {
+      border-color: $red;
+      color: $red;
+    }
+  }
+
+  &__error {
+    margin-top: 0.2rem;
+
+    @include breakpoint-down($sm) {
+      margin-top: 0.4rem;
     }
   }
 
