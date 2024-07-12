@@ -1,0 +1,66 @@
+.clients {
+  padding: 16rem 0;
+  overflow: hidden;
+
+  @include breakpoint-down($xxl) {
+    padding: 10rem 0;
+  }
+
+  @include breakpoint-down($lg) {
+    padding: 8rem 0;
+  }
+
+  @include breakpoint-down($sm) {
+    padding: 12rem 0;
+  }
+
+  &__container {
+    max-width: 160.8rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include breakpoint-down($sm) {
+      margin-right: -2.667rem;
+    }
+  }
+
+  // &__list {
+  // }
+
+  &__item {
+    max-width: calc(100% / 7);
+
+    @include breakpoint-down($lg) {
+      max-width: max-content;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-right: 2.667rem;
+    }
+
+    &:not(:last-child) {
+      @include breakpoint-down($xxl) {
+        margin-left: -0.5rem;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-left: 0;
+      }
+    }
+
+    & > svg {
+      display: block;
+      width: 20.2rem;
+      height: 4.5rem;
+
+      @include breakpoint-down($sm) {
+        width: 31.6rem;
+        height: 6.8rem;
+      }
+    }
+  }
+}
