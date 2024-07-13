@@ -1,3 +1,3 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path id="close" d="M10.54 30.34L9.04 28.86L18.54 19.48L9.04 10.11L10.54 8.62L20 18.04L29.45 8.62L30.95 10.11L21.45 19.48L30.95 28.86L29.45 30.34L20 20.93L10.54 30.34Z" fill="#FFFFFF" fill-opacity="1" fill-rule="nonzero"/>
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<path id="close" d="M10.54 30.34L9.04 28.86L18.54 19.48L9.04 10.11L10.54 8.62L20 18.04L29.45 8.62L30.95 10.11L21.45 19.48L30.95 28.86L29.45 30.34L20 20.93L10.54 30.34Z" fill="currentColor" fill-opacity="1" fill-rule="nonzero"/>
 </svg>

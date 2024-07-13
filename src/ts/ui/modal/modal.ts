@@ -154,10 +154,11 @@ export interface OpenCustomModalProps {
   description?: string;
   button?: string;
   html?: string;
+  img?: string;
 }
 
 export function openCustomModal(props: OpenCustomModalProps) {
-  const { title, description, button, html } = props;
+  const { title, description, button, html, img } = props;
 
   const customModal = document.querySelector<ModalElement>(
     `[data-modal-id="custom-modal"].js-modal`,
@@ -171,10 +172,26 @@ export function openCustomModal(props: OpenCustomModalProps) {
 
   if (!contentCustomModal) return;
 
+  ` <div class="form_popup form_message" >
+    <div class="form" >
+      <div class="form__thanks" >
+        
+          </div>
+          < div class="form__title" > Спасибо! </>
+            < div class="form__message" > Наш менеджер свяжется с & nbsp;вами в течение 24 часов </>
+              < div class="form__thanksLinks" >
+                
+                    </div>
+                    </div>
+                    </div>`
+
   if (html) {
     contentCustomModal.innerHTML = html;
   } else {
     contentCustomModal.innerHTML = `
+      ${img ? `<div class="modal__img">
+        <img src="${(window.assetsUrl || './')}${img}" alt = "Форма отправлена" />
+      </div>` : ''}
       <div class="modal__head">
         <p class="modal__title">${title}</p>
         <button class="modal__close js-modal-close">
@@ -187,7 +204,9 @@ export function openCustomModal(props: OpenCustomModalProps) {
       ${description ? `<p class="modal__text">${description}</p>` : ""}
       ${button ? `<button class="btn btn-blue js-modal-close" type = "button"> 
           <span>${button}</span>
-        </button>` : ""}`;
+        </button>` : ""}
+      <a class="modal__link" href = "https://www.ibrush.ru/competencies/" target = "_blank"> Услуги и компетенции </a>
+      <a class="modal__link" href = "https://www.ibrush.ru/" target = "_blank"> На главную </a>`;
   }
 
   customModal.modal.open();
