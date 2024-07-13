@@ -14,7 +14,9 @@ export function sendDesignSupportRequest() {
       try {
         await axios(url, { data, method });
       } catch (err) {
-        window.openCustomModal({ title: 'Ошибка', button: 'Хорошо', description: 'Попробуйте отправить запрос позднее...' })
+        console.log(err);
+        window.openCustomModal({ title: 'Ошибка', button: 'Хорошо', description: 'Попробуйте отправить запрос позднее...' });
+        setTimeout(form.removeSubmitDisabled, 500);
       }
     }
   });

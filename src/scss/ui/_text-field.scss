@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__label {
     position: absolute;
     top: 50%;

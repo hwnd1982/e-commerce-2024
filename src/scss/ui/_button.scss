@@ -35,4 +35,10 @@
       background-color: #efefef;
     }
   }
+
+  &:disabled {
+    background-color: #c8c8c8;
+    color: #efefef;
+    pointer-events: none;
+  }
 }
