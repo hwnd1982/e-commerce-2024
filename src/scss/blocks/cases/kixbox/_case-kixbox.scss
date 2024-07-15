@@ -46,6 +46,12 @@
     }
   }
 
+  &__text {
+    &_width-text {
+      max-width: 82rem;
+    }
+  }
+
   &__text,
   &__title {
     &:not(:last-child) {
