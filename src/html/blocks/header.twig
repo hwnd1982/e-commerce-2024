@@ -1,6 +1,6 @@
 <header class="header" id="header">
   <div class="header__left">
-    <a href="https://www.ibrush.ru/" class="header__logo">
+    <a href="https://www.ibrush.ru/" target="_blank" class="header__logo">
       {% include '../ui/icon.twig' with {
         props: {
           href: "logo",
@@ -10,13 +10,13 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="#cases" class="header__nav-link">Кейсы</a>
+          <a href="#cases" class="header__nav-link js-scroll-to">Кейсы</a>
         </li>
         <li class="header__nav-item">
-          <a href="#cases" class="header__nav-link">Процесс</a>
+          <a href="#process" class="header__nav-link js-scroll-to">Процесс</a>
         </li>
         <li class="header__nav-item">
-          <a href="#cases" class="header__nav-link">О компании</a>
+          <a href="#about" class="header__nav-link js-scroll-to">О компании</a>
         </li>
       </ul>
     </nav>
