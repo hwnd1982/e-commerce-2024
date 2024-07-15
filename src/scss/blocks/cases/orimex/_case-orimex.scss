@@ -36,9 +36,13 @@
   }
 
   &__text {
-    max-width: 80rem;
+    max-width: 57rem;
     font-size: 1.6rem;
     line-height: 1.6;
+
+    &_width-text {
+      max-width: 80rem;
+    }
 
     @include breakpoint-down($sm) {
       font-size: 3.2rem;
