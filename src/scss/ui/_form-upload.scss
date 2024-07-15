@@ -57,6 +57,7 @@
     height: 5.6rem;
     background: #fff;
     transition: 0.3s background;
+    cursor: pointer;
 
     @include breakpoint-down($sm) {
       width: 11.2rem;

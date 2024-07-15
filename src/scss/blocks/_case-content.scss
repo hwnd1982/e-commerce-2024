@@ -235,6 +235,7 @@
 
   &__left &__text {
     font-size: 2.2rem;
+    max-width: 68rem;
 
     &:not(:last-child) {
       margin-bottom: 1.6rem;
@@ -250,11 +251,13 @@
 
     @include breakpoint-down($sm) {
       font-size: 3.6rem;
+      max-width: none;
     }
   }
 
   &__right &__text {
     font-size: 1.6rem;
+    max-width: 36rem;
 
     &:not(:last-child) {
       margin-bottom: 1.6rem;
@@ -266,6 +269,7 @@
 
     @include breakpoint-down($sm) {
       font-size: 3.2rem;
+      max-width: none;
     }
   }
 

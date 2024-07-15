@@ -52,9 +52,9 @@
       outline-width: 1.6rem;
     }
 
-    @include hover {
-      background-color: #fff;
-    }
+    // @include hover {
+    //   background-color: #fff;
+    // }
 
     &:nth-child(4n) {
       grid-column: 2 / span 2;

@@ -75,6 +75,10 @@ textarea {
   font-family: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-size: min(11.5px, max(6.2px, calc(100vw / 1920 * 10)));
