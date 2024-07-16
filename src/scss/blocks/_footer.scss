@@ -128,8 +128,11 @@
     }
   }
 
-  // &__brief {
-  // }
+  &__brief {
+    @include breakpoint-down($sm) {
+      padding: 3.1rem 3rem 2.7rem;
+    }
+  }
 
   &__back {
     display: flex;
