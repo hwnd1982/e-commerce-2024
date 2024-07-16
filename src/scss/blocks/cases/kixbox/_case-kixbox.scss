@@ -2,6 +2,15 @@
   &__title {
     max-width: 109rem;
   }
+
+  .result__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    @include breakpoint-down($sm) {
+      font-size: 3.2rem;
+    }
+  }
 }
 
 .case-kixbox-section {
@@ -61,6 +70,38 @@
         margin-bottom: 3.2rem;
       }
     }
+
+    &_mb {
+      &_xxl {
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+
+          @include breakpoint-down($xxl) {
+            margin-bottom: 3.2rem;
+          }
+
+          @include breakpoint-down($sm) {
+            margin-bottom: 4.8rem;
+          }
+        }
+      }
+    }
+
+    &_lg-mb {
+      &_none {
+        &:not(:last-child) {
+          margin-bottom: 0;
+
+          @include breakpoint-down($lg) {
+            margin-bottom: 1.6rem;
+          }
+
+          @include breakpoint-down($sm) {
+            margin-bottom: 3.2rem;
+          }
+        }
+      }
+    }
   }
 
   &__img-block {
@@ -96,8 +137,31 @@
 
     &_min {
       max-width: 60%;
+
       @include breakpoint-down($lg) {
         max-width: 100%;
+      }
+
+      &:not(:last-child) {
+        padding-top: 4.4rem;
+        padding-bottom: 5rem;
+
+        @include breakpoint-down($sm) {
+          padding-top: 0.4rem;
+          padding-bottom: 11.2rem;
+        }
+      }
+    }
+
+    &_pt {
+      &_min {
+        &:not(:last-child) {
+          padding-top: 3.4rem;
+
+          @include breakpoint-down($lg) {
+            padding-top: 1.6rem;
+          }
+        }
       }
     }
 
@@ -138,6 +202,10 @@
     & ul {
       padding-left: 2.5rem;
       list-style-type: disc;
+
+      @include breakpoint-down($sm) {
+        padding: 4.8rem 0 4.8rem 2.5rem;
+      }
     }
   }
 
@@ -145,6 +213,12 @@
     @include breakpoint-down($sm) {
       padding-top: 8rem;
     }
+
+    // &_border {
+    //   overflow: hidden;
+    //   border-radius: 0.8rem;
+    //   border: 1px solid #e5e5e580;
+    // }
   }
 
   &__container {

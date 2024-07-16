@@ -1,9 +1,19 @@
 .cases-slider {
   padding-top: 8rem;
 
-  @include breakpoint-down($lg) {
+  @include breakpoint-down($xxl) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
   }
+
+  @include breakpoint-down($lg) {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
   @include breakpoint-down($sm) {
+    padding-top: 16rem;
+    padding-bottom: 6rem;
   }
 
   // &__container {
@@ -14,6 +24,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 6rem;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 3.2rem;
+    }
 
     @include breakpoint-down($lg) {
       margin-bottom: 2.4rem;
@@ -49,10 +63,18 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 5.6rem;
     height: 5.6rem;
     border-radius: 1.2rem;
     background-color: #f4f4f6;
+
+    & > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   &__body {

@@ -1,8 +1,10 @@
 import PerfectScrollbar from "perfect-scrollbar";
 import { initScrollTo } from "../modules";
 import { initVh } from "./vh";
+import { initScrollbar } from "./scrollbar";
 
 export function initBase() {
+  initScrollbar();
   initScrollTo();
   initVh();
 

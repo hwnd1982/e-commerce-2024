@@ -1,9 +1,29 @@
+.case-content .review .container {
+  max-width: 105.2rem;
+
+  @include breakpoint-down($xxl) {
+    max-width: none;
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+
+  @include breakpoint-down($lg) {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  @include breakpoint-down($sm) {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+}
+
 .review {
   background-color: #f4f4f6;
   padding: 10rem 0;
 
-  @include breakpoint-down($lg) {
-    padding: 8rem 0;
+  @include breakpoint-down($xxl) {
+    padding: 6rem 0;
   }
 
   @include breakpoint-down($sm) {
@@ -16,9 +36,9 @@
     border-top: 1px solid #c7cad0;
     border-bottom: 1px solid #c7cad0;
 
-    @include breakpoint-down($lg) {
+    @include breakpoint-down($xxl) {
       padding-top: 4rem;
-      padding-bottom: 6.4rem;
+      padding-bottom: 5.2rem;
     }
 
     @include breakpoint-down($sm) {
@@ -29,7 +49,7 @@
 
   &__block {
     display: grid;
-    gap: 1.8rem;
+    gap: 9.8rem;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "text logo";
 

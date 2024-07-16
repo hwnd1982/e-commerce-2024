@@ -1,4 +1,10 @@
 .case-monsher {
+  padding-bottom: 6.6rem;
+
+  @include breakpoint-down($lg) {
+    padding-bottom: 0;
+  }
+
   &__title {
     max-width: 80rem;
   }
@@ -151,7 +157,7 @@
     }
 
     @include breakpoint-down($sm) {
-      width: 80%;
+      width: 87.5%;
       padding: 1rem;
       border-radius: 3rem;
       top: 25rem;

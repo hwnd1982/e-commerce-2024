@@ -84,7 +84,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 7rem;
+    padding: 7rem 7rem 11.4rem;
 
     @include breakpoint-down($sm) {
       border-radius: 0.2rem;

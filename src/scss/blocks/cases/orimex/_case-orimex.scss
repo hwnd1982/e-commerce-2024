@@ -2,6 +2,18 @@
   &__title {
     max-width: 65rem;
   }
+
+  .case-content__right .case-content__text {
+    font-size: 1.8rem;
+
+    @include breakpoint-down($xxl) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 3.2rem;
+    }
+  }
 }
 
 .case-orimex-section {
@@ -37,11 +49,15 @@
 
   &__text {
     max-width: 57rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.6;
 
     &_width-text {
       max-width: 80rem;
+    }
+
+    @include breakpoint-down($lg) {
+      font-size: 1.6rem;
     }
 
     @include breakpoint-down($sm) {

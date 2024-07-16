@@ -43,7 +43,7 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    max-width: 25.2rem;
+    max-width: 25.5rem;
     min-height: 14.6rem;
 
     @include breakpoint-down($lg) {

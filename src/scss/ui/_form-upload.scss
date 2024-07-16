@@ -94,16 +94,24 @@
       width: 5.6rem;
       height: 5.6rem;
       background: #c7cad0;
+      fill: #8f95a1;
     }
 
     &-name {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      max-width: 18em;
       font-size: 1.6rem;
       line-height: 160%;
 
+      @include breakpoint-down($lg) {
+        font-size: 1.4rem;
+      }
+
       @include breakpoint-down($sm) {
+        font-size: 2.8rem;
+        max-width: 12em;
       }
     }
 

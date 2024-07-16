@@ -16,7 +16,7 @@
         content: "";
         display: block;
         width: 100%;
-        padding-bottom: 4rem;
+        padding-bottom: 9rem;
         border-bottom: 1px solid #c8c8c8;
       }
 
@@ -111,8 +111,11 @@
       right: 0;
       bottom: 0;
       object-fit: contain;
-      object-position: right bottom;
       z-index: -1;
+
+      @include breakpoint-down($xxl) {
+        object-position: right bottom;
+      }
     }
   }
 
@@ -120,7 +123,7 @@
     display: flex;
     align-items: center;
     border: 1px solid #f2f2f2;
-    padding: 2.5rem 3.2rem 3rem;
+    padding: 3rem 3.2rem 2.5rem;
 
     @include breakpoint-down($lg) {
       padding: 2rem 1.6rem 1.4rem;
@@ -140,12 +143,12 @@
 
       @include breakpoint-down($xxl) {
         font-size: 2rem;
-        margin-right: 0;
-        margin-bottom: 1rem;
       }
 
       @include breakpoint-down($lg) {
         color: #4d2323;
+        margin-right: 0;
+        margin-bottom: 1rem;
       }
 
       @include breakpoint-down($sm) {

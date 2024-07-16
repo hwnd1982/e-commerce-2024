@@ -11,7 +11,6 @@ function initIndex() {
   initModals();
 
   initSwiperOverflow();
-  initScrollbar();
 
   initUploadFiles();
   initCasesSliders();

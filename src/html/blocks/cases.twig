@@ -8,7 +8,13 @@
       {% for case in props.cases %}
         <li class="cases__item js-modal-trigger" data-modal-id="case-{{case.name}}-modal">
           <h2 class="cases__item-title">{{case.text}}</h2>
-          <img src="./img/cases/{{case.name}}.png" alt="" class="cases__item-img">
+          <picture>
+            <source media="(max-width: 575px)"
+              srcset="./img/cases/{{case.name}}-mobile.png">
+            <source media="(max-width: 1023px)"
+              srcset="./img/cases/{{case.name}}-tablet.png">
+            <img src="./img/cases/{{case.name}}.png" alt="" class="cases__item-img">
+          </picture>
         </li>
       {% endfor %}
     </ul>
