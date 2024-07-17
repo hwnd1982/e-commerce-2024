@@ -344,8 +344,16 @@
       flex-shrink: 0;
       margin-right: 2.4rem;
 
+      @include breakpoint-down($xxl) {
+        margin-right: 1rem;
+      }
+
       @include breakpoint-down($lg) {
         margin-right: 1.6rem;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-right: 2.8rem;
       }
     }
   }
@@ -377,10 +385,12 @@
 
     @include breakpoint-down($xxl) {
       font-size: 1.8rem;
+      max-width: 36rem;
     }
 
     @include breakpoint-down($sm) {
       font-size: 3.2rem;
+      max-width: none;
     }
 
     &:not(:last-child) {

@@ -57,6 +57,7 @@
     height: 5.6rem;
     background: #fff;
     transition: 0.3s background;
+    fill: #8f95a1;
     cursor: pointer;
 
     @include breakpoint-down($sm) {
@@ -94,7 +95,6 @@
       width: 5.6rem;
       height: 5.6rem;
       background: #c7cad0;
-      fill: #8f95a1;
     }
 
     &-name {
