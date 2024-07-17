@@ -1,11 +1,11 @@
 import { initCasesSliders, initClipboardMail, initUploadFiles, initValidateForms, sendDesignSupportRequest } from "./modules";
-import { initAutoheightAextarea, initModals, initSwiperOverflow, initTextFields } from "./ui";
-import { initScrollbar } from "./utils";
+import { initAutoheightAextarea, initModals, initRadios, initSwiperOverflow, initTextFields } from "./ui";
 
 document.addEventListener("DOMContentLoaded", initIndex);
 
 function initIndex() {
   initTextFields();
+  initRadios();
   initAutoheightAextarea();
   initValidateForms();
   initModals();

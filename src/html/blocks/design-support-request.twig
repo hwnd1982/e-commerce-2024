@@ -31,7 +31,7 @@
                 label: "Телефон, почта",
                 class: "form__field",
                 name: "telEmail",
-                validate: "text, required",
+                validate: "telEmail, required",
                 error: "Введен неверный формат",
             } } only %}
           </div>
@@ -63,13 +63,13 @@
           </div>
 
           <div class="form__row-submit">
-            <button data-sitekey="6LfI1VEnAAAAAE5a9pCHCXzFl_weIzAOFJ0F7Z0F" data-callback="submitCurrForm" type="submit" class="button g-recaptcha form__submit js-form-submit">Отправить</button>
+            <button data-sitekey="6LfI1VEnAAAAAE5a9pCHCXzFl_weIzAOFJ0F7Z0F" data-callback="submitCurrForm" type="submit" class="button g-recaptcha form__submit js-form-submit" disabled>Отправить</button>
             <div class="privacy-link form__row_privacy">
               <label class="privacy-link__check js-radio">
-                <input type="radio" class="js-radio-input" name="privacy-policy" checked>
+                <input type="checkbox" id="{{props.id}}-privacy-policy" data-validate="required", class="js-radio-field" name="privacy-policy" required checked>
                 <span></span>
               </label>
-              <label>Соглашаюсь с&nbsp;<a href="https://www.ibrush.ru/privacy/">политикой конфиденциальности</a></label>
+              <label for="{{props.id}}-privacy-policy">Соглашаюсь с&nbsp;<a target="_blank" href="https://www.ibrush.ru/privacy/">политикой конфиденциальности</a></label>
             </div>
           </div>                    
 

@@ -10,7 +10,7 @@
 })|merge(props ?: {}) %}
 
 {% set link %}
-  <a href="{{props.linkHref}}" class="case-content__link">
+  <a href="{{props.linkHref}}" target="_blank" class="case-content__link">
     <span>{{props.linkText}}</span>
     {% include '../ui/icon.twig' with {
       props: {

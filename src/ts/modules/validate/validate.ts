@@ -1,13 +1,14 @@
 import type { TextFieldElement, TextFieldValidate } from "../../ui/text-field";
 import { debounce, states } from "../../utils";
 import { initTextFieldsByFormId } from "../../ui/text-field";
+import { RadioElement, RadioValidate } from "src/ts/ui";
 
 
 
 export type ValidateFormElement = HTMLFormElement & { validate?: ValidateForm };
 
 export interface ValidateFormFields {
-  inputs?: Array<TextFieldElement>;
+  inputs?: Array<TextFieldElement | RadioElement>;
   textareas?: [];
   submit?: HTMLButtonElement;
 }
@@ -41,6 +42,7 @@ export class ValidateForm {
       this.el.querySelector<HTMLButtonElement>('.js-form-validation-error-message');
     this.fields.inputs = [
       ...this.el.querySelectorAll<TextFieldElement>(".js-text-field"),
+      ...this.el.querySelectorAll<RadioElement>(".js-radio"),
     ];
   };
 
@@ -79,7 +81,8 @@ export class ValidateForm {
 
   private handleFocusOut = (e: Event) => {
     const target = e.target as HTMLInputElement;
-    const field = (target.closest(".js-text-field") as TextFieldElement);
+    const field = (target.closest(".js-text-field") as TextFieldElement) ||
+      (target.closest(".js-radio") as RadioElement);
 
     if (!field) return;
 
@@ -110,14 +113,17 @@ export class ValidateForm {
     this.fields.submit?.removeAttribute("disabled");
   };
 
-  public checkValidByField = (field: TextFieldElement) => {
+  public checkValidByField = (field: TextFieldElement | RadioElement) => {
     let validate: {
       isValid: boolean;
-      error: TextFieldValidate | null;
+      error: RadioValidate | TextFieldValidate | null;
     };
 
-
-    validate = field.textField.checkValid();
+    if ("textField" in field) {
+      validate = field.textField.checkValid();
+    } else if ("radio" in field) {
+      validate = field.radio.checkValid();
+    }
 
     const { isValid, error } = validate;
 
@@ -149,6 +155,10 @@ export class ValidateForm {
 
       if ("textField" in input) {
         if (!input.textField.checkValid().isValid) {
+          isValid = false;
+        }
+      } else if ("radio" in input) {
+        if (!input.radio.checkValid().isValid) {
           isValid = false;
         }
       }

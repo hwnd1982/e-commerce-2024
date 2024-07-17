@@ -9,6 +9,7 @@ export type TextFieldValidate =
   | "time"
   | "required"
   | "email"
+  | "telEmail"
   | "text"
 
 export interface TextFieldValidateResult {
@@ -219,6 +220,22 @@ export class TextField {
             ) {
               validation.isValid = false;
               validation.error = "email";
+            }
+
+            break;
+          }
+          case "telEmail": {
+            if (
+              this.field.value &&
+              !/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(
+                this.field.value,
+              ) &&
+              !/^(\+7|8){0,2}(\s){0,1}(\(){0,1}(\d){3}(\)){0,1}(-|\s){0,1}(\d){3}(-|\s){0,1}(\d){2}(-|\s){0,1}(\d){2}$/i.test(
+                this.field.value,
+              )
+            ) {
+              validation.isValid = false;
+              validation.error = "telEmail";
             }
 
             break;

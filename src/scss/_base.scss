@@ -88,7 +88,7 @@ body {
   }
 
   @include breakpoint-down($sm) {
-    font-size: min(7px, max(5px, calc(100vw / 375 * 5)));
+    font-size: min(7px, max(4px, calc(100vw / 375 * 5)));
   }
 }
 
