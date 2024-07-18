@@ -8,14 +8,14 @@
   line-height: 1;
 
   @include breakpoint-down($lg) {
-    // padding: 1.6rem 3rem;
-    padding: 1.7rem 3rem 1.5rem;
+    padding: 1.6rem 3rem;
+    // padding: 1.7rem 3rem 1.5rem;
   }
 
   @include breakpoint-down($sm) {
     font-size: 3rem;
-    // padding: 2.9rem 3.2rem;
-    padding: 3.1rem 4rem 2.7rem;
+    padding: 2.9rem 3.2rem;
+    // padding: 3.1rem 4rem 2.7rem;
     border-radius: 6rem;
   }
 

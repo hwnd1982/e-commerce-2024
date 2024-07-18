@@ -35,7 +35,7 @@
     &-bottom {
       display: grid;
       grid-template-columns: 1fr 41rem;
-      gap: 2.4rem;
+      gap: 13.5rem;
 
       @include breakpoint-down($xxl) {
         grid-template-columns: 1fr 30rem;
@@ -168,7 +168,7 @@
   &__main {
     display: grid;
     grid-template-columns: 1fr 41rem;
-    gap: 2.4rem;
+    gap: 13.5rem;
 
     padding-bottom: 8rem;
     border-bottom: 1px solid #e9eaec;
@@ -296,8 +296,8 @@
     padding-left: 0;
     padding-right: 0;
     max-width: 137.8rem;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
 
     @include breakpoint-down($lg) {
       padding-left: 1.6rem;
