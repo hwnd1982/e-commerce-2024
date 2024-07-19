@@ -202,10 +202,11 @@
         text-decoration: none;
         font-size: 1.8rem;
         line-height: 1;
-        max-width: 24.1rem;
+        max-width: 24.6rem;
         width: 100%;
         border-radius: 2.5rem;
         transition: 0.3s;
+        white-space: nowrap;
 
         @include hover {
           background-color: #e04f39;
